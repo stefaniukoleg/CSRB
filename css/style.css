@@ -48,7 +48,7 @@ margin-left: 300px;
 }
 nav{
 	z-index: 3;
-	position: absolute;
+	position: fixed;
 	top: 0px;
 	line-height: 80px;
 	height: 80px;
@@ -259,4 +259,26 @@ img:hover {
 	font-size: 20px;
 background-color: #d68c18;
 
+}
+
+
+
+#top-menu a:hover {
+    color: #000;
+}
+
+#top-menu li.active a {
+	font-size: 17px;
+	font-weight: bold;
+		-webkit-transition:0.5s;
+    border-bottom: 5px solid #d68c18;
+    color: white;
+}
+.callback{
+    width: 80px !important;
+    height: 80px !important;
+}
+.callback-image{
+	width: 60px;
+    height: 90px;
 }

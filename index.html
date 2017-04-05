@@ -8,6 +8,7 @@
   <!--Import materialize.css-->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.1/css/materialize.min.css">
   <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
 
   <!--Let browser know website is optimized for mobile-->
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -17,33 +18,35 @@
   <!-- navbar -->
   <nav>
     <div class="nav-wrapper container">
-      <div class="logo-block left"><img class="header-logo" src="img/logo/logo.svg" alt="logo"></div>
+      <a href="#one"><div class="logo-block left"><img class="header-logo" src="img/logo/logo.svg" alt="logo"></div></a>
       <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
       <div class="lang-block"> <img class="lang-img" src="img/languages/rus.svg" alt="logo">
         <img class="lang-img" src="img/languages/ukr.svg" alt="logo">
       </div>
-      <ul class="left menu-block hide-on-med-and-down">
-        <li><a  href="sass.html">Візи</a></li>
-        <li><a href="badges.html">Країни</a></li>
-        <li><a href="collapsible.html">Іміграція</a></li>
-        <li><a href="mobile.html">Команда</a></li>
-        <li><a href="badges.html">Контакти</a></li>
-
-        <li><a class="waves-effect white-text waves-light btn btn-pad">Анкетна інформація</a></li>
+      <ul id="top-menu" class="left menu-block hide-on-med-and-down">
+   
+        <li ><a href="#two">Візи</a></li>
+        <li><a href="#fgd">Країни</a></li>
+        <li><a href="#sdfsdf">Іміграція</a></li>
+        <li><a href="#asdsa">Команда</a></li>
+        <li><a href="#zxc">Контакти</a></li>
+</ul>
+<ul>
+        <li><a href="#" class="waves-effect white-text waves-light btn btn-pad">Анкетна інформація</a></li>
         <li><div class="social-block"> <img class="social-img" src="img/social/facebook.svg" alt="logo"> <img class="social-img" src="img/social/vk.svg" alt="logo"></div></li>
       </ul>
       <ul class="side-nav" id="mobile-demo">
-        <li><a  href="sass.html">Візи</a></li>
-        <li><a href="badges.html">Країни</a></li>
-        <li><a href="collapsible.html">Іміграція</a></li>
-        <li><a href="mobile.html">Команда</a></li>
-        <li><a href="badges.html">Контакти</a></li>
+        <li><a  href="#">Візи</a></li>
+        <li><a href="#">Країни</a></li>
+        <li><a href="#">Іміграція</a></li>
+        <li><a href="#">Команда</a></li>
+        <li><a href="#">Контакти</a></li>
       </ul>
     </div>
   </nav>
   <!-- end of the navbar -->  
   <!-- main-block --> 
-  <div class="main-block">
+  <div id="one" class="main-block">
     <div class="parallax-container">
       <div class="parallax"><img src="img/backgorunds/1.jpg" alt="parallax">
         <div class="mask">
@@ -71,7 +74,7 @@
   </div>
     <!--end main-block --> 
     <!--offer block --> 
-    <div class="offer-block">
+    <div id="two" class="offer-block">
       <div class="parallax-container">
         <div class="parallax"><img src="img/backgorunds/2.jpg" alt="parallax">
           <div class="mask-second">
@@ -140,7 +143,9 @@
 
 
     <!-- menu-btn -->
-    <a id="menu-btn" class="waves-effect waves-light btn-large pulse btn-floating" ></a>
+  <a id="menu-btn" class="waves-effect waves-light btn-large pulse btn-floating callback" >
+      <img class="callback-image" src="img/pictures/telephone.svg">
+    </a>
 
 
     <!--Import jQuery before materialize.js-->
@@ -150,6 +155,52 @@
       $(document).ready(function(){
         $('.parallax').parallax();
       });
+    </script>
+    <script>
+      var lastId,
+    topMenu = $("#top-menu"),
+    topMenuHeight = topMenu.outerHeight()+15,
+    // All list items
+    menuItems = topMenu.find("a"),
+    // Anchors corresponding to menu items
+    scrollItems = menuItems.map(function(){
+      var item = $($(this).attr("href"));
+      if (item.length) { return item; }
+    });
+
+// Bind click handler to menu items
+// so we can get a fancy scroll animation
+menuItems.click(function(e){
+  var href = $(this).attr("href"),
+      offsetTop = href === "#" ? 0 : $(href).offset().top-topMenuHeight+1;
+  $('html, body').stop().animate({ 
+      scrollTop: offsetTop
+  }, 300);
+  e.preventDefault();
+});
+
+// Bind to scroll
+$(window).scroll(function(){
+   // Get container scroll position
+   var fromTop = $(this).scrollTop()+topMenuHeight;
+   
+   // Get id of current scroll item
+   var cur = scrollItems.map(function(){
+     if ($(this).offset().top < fromTop)
+       return this;
+   });
+   // Get the id of the current element
+   cur = cur[cur.length-1];
+   var id = cur && cur.length ? cur[0].id : "";
+   
+   if (lastId !== id) {
+       lastId = id;
+       // Set/remove active class
+       menuItems
+         .parent().removeClass("active")
+         .end().filter("[href='#"+id+"']").parent().addClass("active");
+   }                   
+});
     </script>
   </body>
   </html>
