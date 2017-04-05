@@ -1,60 +1,155 @@
 <!DOCTYPE html>
-  <html>
-    <head>
-    <meta charset="utf-8">
-      <!--Import Google Icon Font-->
-      <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-      <!--Import materialize.css-->
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.1/css/materialize.min.css">
-      <link rel="stylesheet" href="css/style.css">
+<html>
+<head>
+<title>CSRB</title>
+  <meta charset="utf-8">
+  <!--Import Google Icon Font-->
+  <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!--Import materialize.css-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.1/css/materialize.min.css">
+  <link rel="stylesheet" href="css/style.css">
 
-      <!--Let browser know website is optimized for mobile-->
-      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    </head>
+  <!--Let browser know website is optimized for mobile-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+</head>
 
-    <body>
-    <!-- navbar -->
-    
-
-
-    <!-- end of the navbar -->
-<nav >
-<div class="social-block"> <img class="social-img" src="img/social/facebook.svg" alt="logo"></div>
-       <div class="social-block"><img class="social-img" src="img/social/vk.svg" alt="logo"></div>
-    <div class="nav-wrapper">
-
-      <a href="#!" class="brand-logo"><img class="header-logo" src="img/logo/logo.svg" alt="logo"></a>
+<body>
+  <!-- navbar -->
+  <nav>
+    <div class="nav-wrapper container">
+      <div class="logo-block left"><img class="header-logo" src="img/logo/logo.svg" alt="logo"></div>
       <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
       <div class="lang-block"> <img class="lang-img" src="img/languages/rus.svg" alt="logo">
-       <img class="lang-img" src="img/languages/ukr.svg" alt="logo"></div>
-       
-       <div class="">
-      <ul class="left menu-block hide-on-med-and-down">
-        <li><a href="sass.html">Sass</a></li>
-        <li><a href="badges.html">Components</a></li>
-        <li><a href="collapsible.html">Javascript</a></li>
-        <li><a href="mobile.html">Mobile</a></li>
-        <li><a href="badges.html">Components</a></li>
-        <li><a href="collapsible.html">Javascript</a></li>
-        <li><a href="mobile.html">Mobile</a></li>
-        <li><a class="waves-effect waves-light btn">Lorem ipsum dolor</a></li>
-       
-      </ul>
+        <img class="lang-img" src="img/languages/ukr.svg" alt="logo">
       </div>
-      
+      <ul class="left menu-block hide-on-med-and-down">
+        <li><a  href="sass.html">Візи</a></li>
+        <li><a href="badges.html">Країни</a></li>
+        <li><a href="collapsible.html">Іміграція</a></li>
+        <li><a href="mobile.html">Команда</a></li>
+        <li><a href="badges.html">Контакти</a></li>
+
+        <li><a class="waves-effect white-text waves-light btn btn-pad">Анкетна інформація</a></li>
+        <li><div class="social-block"> <img class="social-img" src="img/social/facebook.svg" alt="logo"> <img class="social-img" src="img/social/vk.svg" alt="logo"></div></li>
+      </ul>
       <ul class="side-nav" id="mobile-demo">
-        <li><a href="sass.html">Sass</a></li>
-        <li><a href="badges.html">Components</a></li>
-        <li><a href="collapsible.html">Javascript</a></li>
-        <li><a href="mobile.html">Mobile</a></li>
+        <li><a  href="sass.html">Візи</a></li>
+        <li><a href="badges.html">Країни</a></li>
+        <li><a href="collapsible.html">Іміграція</a></li>
+        <li><a href="mobile.html">Команда</a></li>
+        <li><a href="badges.html">Контакти</a></li>
       </ul>
     </div>
   </nav>
-         
+  <!-- end of the navbar -->  
+  <!-- main-block --> 
+  <div class="main-block">
+    <div class="parallax-container">
+      <div class="parallax"><img src="img/backgorunds/1.jpg" alt="parallax">
+        <div class="mask">
+          <div class="row container">
+            <div class="col l6"> 
+              <div class="main-sign">
+                <div>віза шенген </div>
+                <div>європейський центр бізнесу</div>
+                <div>професійно індивідуально надійно</div>
+              </div>
+            </div>
+            <div class="col l6 center"> 
+              <form id="application" action=" application.php" method="POST" name=" application ">
+                <div class="form-label right">Залиште Ваші дані і ми зв'яжемося з Вами та дамо відповідь на любе питання</div>
+                <input name="name" id="applicationName" maxlength="20" placeholder="Ваше і'мя" required />
+                <input name="email" type="email" id="applicationEmail" maxlength="20" placeholder="Вваш E-mail" required />
+                <input name="number" type="tel" id="applicationTelephone"  placeholder="Ваш номер телефону" required/>
+                <button class="applicationButton" type="submit" form="application">Безкоштовна консультація </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div> 
+  </div>
+    <!--end main-block --> 
+    <!--offer block --> 
+    <div class="offer-block">
+      <div class="parallax-container">
+        <div class="parallax"><img src="img/backgorunds/2.jpg" alt="parallax">
+          <div class="mask-second">
+            <div class="line-main container">
+              <div class="line-sign">ВІЗИ</div>
+              <div class="block-line"></div>
+            </div>
+            <div class="row container offer-block-pad">
+              <div class="col l4"> 
+                <a href="#">
+                  <div class="single-offer center">
+                    <div class="offer-sign">
+                      коротка віза
+                    </div>
+                    <div class="offer-desc">
+                      10-20 днів
+                    </div>
+                  </div>
+                </a>
+                <a href="#" class="waves-effect black-text waves-light btn btn-offer">безкоштовна консультація</a>
+              </div>
+              <div class="col l4"> 
+                <a href="#">
+                  <div class="single-offer center">
+                    <div class="offer-sign">
+                      мультивіза
+                    </div>
+                    <div class="offer-desc">
+                      6 місяців - 5 років
+                    </div>
+                  </div>
+                </a>
+                <a href="#" class="waves-effect black-text waves-light btn btn-offer">безкоштовна консультація</a>
+              </div>
+              <div class="col l4"> 
+                <a href="#">
+                  <div class="single-offer center">
+                    <div class="offer-sign">
+                      національна віза
+                    </div>
+                    <div class="offer-desc">
+                     6 місяців - 5 років
+                    </div>
+                  </div>
+                </a>
+                <a href="#" class="waves-effect black-text waves-light btn btn-offer">безкоштовна консультація</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
 
-      <!--Import jQuery before materialize.js-->
-      <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.1/js/materialize.min.js"></script>
-    </body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- menu-btn -->
+    <a id="menu-btn" class="waves-effect waves-light btn-large pulse btn-floating" ></a>
+
+
+    <!--Import jQuery before materialize.js-->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.1/js/materialize.min.js"></script>
+    <script> 
+      $(document).ready(function(){
+        $('.parallax').parallax();
+      });
+    </script>
+  </body>
   </html>
