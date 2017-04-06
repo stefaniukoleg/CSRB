@@ -43,7 +43,10 @@ display: inline-block;
 .btn-pad{
 padding:0px 5px 0px 5px;
 border-radius: 10px;
-background-color: #d68c18;
+background-color: #ffcc00;
+}
+.btn-pad:hover{
+background-color: #ffa200;
 }
 nav{
 z-index: 999;
@@ -149,7 +152,7 @@ text-shadow: 0 1px 1px rgba(0, 0, 0, .3);
 /*Стилі для кнопки*/
 .applicationButton {
 margin-top: 15px;
-background: #d68c18;
+background: #ffcc00;
 border: none;
 width: 80%;
 height: 53px;
@@ -161,7 +164,7 @@ font-family: 'PT Sans', sans-serif;
 cursor: pointer;
 }
 .applicationButton:hover {
-background:#30ad64;
+background:#ffa200;
 }
 .form-label{
 color: white;
@@ -248,9 +251,12 @@ height: 60px;
 line-height: 60px;
 font-weight: 400;
 font-size: 20px;
-background-color: #d68c18;
-
+background-color: #ffcc00;
 }
+.btn-offer:hover{
+background-color: #ffa200;
+}
+
 #top-menu a:hover {
 color: #000;
 }
@@ -282,11 +288,11 @@ background-size: cover;
 font-size: 17px;
 padding: 0 5px 0 5px;
 margin-top: 30px;
-background-color: #d68c18;
+background-color: #ffcc00;
 display: none;
 }
 .btn-country:hover{
-background-color: red !important;
+background-color: #ffa200 !important;
 }
 .country-main:hover .btn-country{
 font-size: 17px;
@@ -305,3 +311,14 @@ height: 100%;
 background-position: center;
 background-size: cover;
 }
+#applicationName:focus,
+#applicationEmail:focus, 
+#applicationTelephone:focus {
+border: 1px solid #FFC107;
+}
+input[type=tel]:focus:not([readonly]),
+input[type=email]:focus:not([readonly]),
+input:not([type]):focus:not([readonly]){
+	box-shadow: 0 1px 0 0 #ffcc00;
+}
+
