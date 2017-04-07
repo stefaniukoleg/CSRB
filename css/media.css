@@ -1,0 +1,31 @@
+@media screen and (max-width:768px){.container{width:100%;}
+.lang-block{margin-left:0;right:55px;}
+nav i.material-icons{position:absolute;right:0;font-size:50px;color:black;}
+.button-collapse{margin:0 !important;}
+nav .button-collapse i{height:56px;line-height:80px;}
+.container-mob{height:900px;}
+.container-mob-sec{height:1500px;}
+.container-mob-third{height:850px;}
+.main-sign{margin-top:90px;}
+.main-sign div:nth-child(1),.main-sign div:nth-child(2),.main-sign div:nth-child(3){font-size:33px;}
+#application{margin-top:50px;}
+.form-label{margin-right:15px;width:90%;text-align:center;}
+.applicationButton{color:black;font-size:17px;}
+.btn-offer{font-size:15px;margin-top:10px;margin-bottom:20px;}
+.single-offer div{font-size:29px;}
+.line-sign-third{font-weight:300;font-size:25px;padding-bottom:20px;}
+.imigration-offer{margin-bottom:30px;}
+.btn-imig{font-size:11px;margin-top:10px;}
+.imigration-type{padding-top:60px;}
+.promotion-block-height{height:560px;}
+.promotion-type{font-size:31px;}
+.promotion-desc{width:95%;font-size:19px;}
+.team-block-pad{padding-bottom:0px;}
+.container-mob-four{height:1270px;}
+.advantages-block-pad{padding-top:50px;}
+.advantages-block{padding-bottom:50px;}
+.contacts-block{position:static;margin-top:0;background-color:rgba(0, 0, 0,.3);height:480px;width:100%;}
+.fot-form-sign{font-size:31px;}
+.copyright-info a{font-size:19px;}
+#menu-btn{right:5px;top:85%;}
+}
