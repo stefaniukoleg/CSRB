@@ -28,4 +28,7 @@ nav .button-collapse i{height:56px;line-height:80px;}
 .fot-form-sign{font-size:31px;}
 .copyright-info a{font-size:19px;}
 #menu-btn{right:5px;top:85%;}
+.container-mob-single{
+	height: 1500px;
+}
 }
