@@ -141,6 +141,9 @@ padding-bottom: 40px;
     width: 100%;
     margin-top: 170px;
 }
+#application-anketa {
+    width: 100%;
+}
 
 #applicationName,
 #applicationEmail,
@@ -215,6 +218,10 @@ padding-bottom: 40px;
     font-size: 15px;
     text-align: right;
     margin-right: 60px;
+}
+.form-label-anketa {
+    color: white;
+    font-size: 15px;
 }
 
 #menu-btn {
@@ -695,4 +702,13 @@ input:not([type]):focus:not([readonly]) {
 
 .table-title{
     font-size: 25px;
+}
+
+.modal{
+    z-index: 99999;
+}
+
+.anketa-bg{
+    background-image: url(../img/bg/2.jpg);
+    background-position: center;
 }

@@ -35,6 +35,13 @@
         .contacts-block {
           height: 400px;
         }
+        nav i.material-icons {
+        position: absolute;
+        right: 0;
+        font-size: 50px;
+        color: black;
+        display: block !important;
+    }
       }
     </style>
   </head>
@@ -43,7 +50,7 @@
     <!-- navbar -->
     <nav>
       <div class="nav-wrapper container">
-        <a href="#" data-activates="mobile-demo" class="button-collapse right"><i class="material-icons">menu</i></a>
+        <a href="#" data-activates="mobile-demo" class="button-collapse right"><i class="material-icons hide">menu</i></a>
         <a href="#one"><div class="logo-block left"><img class="header-logo" src="img/logo/logo.svg" alt="logo"></div></a>
         <div class="lang-block"> <img class="lang-img" src="img/languages/rus.svg" alt="logo">
           <img class="lang-img" src="img/languages/ukr.svg" alt="logo">
@@ -56,19 +63,32 @@
           <li><a href="#eight">Контакти</a></li>
         </ul>
         <ul>
-          <li><a href="#" class="hide-on-small-only waves-effect white-text waves-light btn btn-pad">Анкетна інформація</a></li>
+          <li><a href="#modal1" class="hide-on-small-only waves-effect white-text waves-light btn btn-pad">Анкетна інформація</a></li>
           <li><div class="hide-on-small-only social-block"><img class="social-img" src="img/social/vk.svg" alt="logo"><img class="social-img" src="img/social/facebook.svg" alt="logo"></div></li>
         </ul>
         <ul class="side-nav" id="mobile-demo">
-          <li><a  href="#">Візи</a></li>
-          <li><a href="#">Країни</a></li>
-          <li><a href="#">Іміграція</a></li>
-          <li><a href="#">Команда</a></li>
-          <li><a href="#">Контакти</a></li>
+          <li><a  href="#two">Візи</a></li>
+          <li><a href="#three">Країни</a></li>
+          <li><a href="#four">Іміграція</a></li>
+          <li><a href="#six">Команда</a></li>
+          <li><a href="#eight">Контакти</a></li>
         </ul>
       </div>
     </nav>
-    <!-- end of the navbar -->  
+    <!-- end of the navbar -->
+<div id="modal1" class="modal anketa-bg">
+<div class="mask">
+<div class="modal-content center">
+<form data-wow-delay="0.9s"  id="application-anketa" action=" application.php" method="POST" name=" application ">
+                  <div class="form-label-anketa center">Залиште Ваші дані і ми зв'яжемося з Вами та дамо відповідь на любе питання</div>
+                  <input name="name" id="applicationName" maxlength="20" placeholder="Ваше і'мя" required />
+                  <input name="email" type="email" id="applicationEmail" maxlength="20" placeholder="Вваш E-mail" required />
+                  <input name="number" type="tel" id="applicationTelephone"  placeholder="Ваш номер телефону" required/>
+                  <button class="applicationButton" type="submit" form="application">Безкоштовна консультація </button>
+                </form>
+</div>
+</div>
+</div>  
     <!-- main-block --> 
     <div id="one" class="main-block">
       <div class="parallax-container container-mob">
@@ -108,7 +128,7 @@
             </div>
             <div class="row container offer-block-pad">
               <div class="col l4 s12 m6"> 
-                <a href="#">
+                <a href="short-visa.html">
                   <div class="single-offer center fadeInLeft wow" data-wow-delay="0.5s" >
                     <div class="offer-sign">
                       коротка віза
@@ -121,7 +141,7 @@
                 <a href="#" data-wow-delay="0.5s" class="waves-effect wow tada black-text waves-light btn btn-offer">безкоштовна консультація</a>
               </div>
               <div class="col l4 s12 m6"> 
-                <a href="#">
+                <a href="multivisa.html">
                   <div class="single-offer center fadeInUp wow" data-wow-delay="0.5s" >
                     <div class="offer-sign">
                       мультивіза
@@ -134,13 +154,13 @@
                 <a href="#" data-wow-delay="0.5s"  class="waves-effect wow tada black-text waves-light btn btn-offer">безкоштовна консультація</a>
               </div>
               <div class="col l4 s12 m12"> 
-                <a href="#">
+                <a href="national-visa.html">
                   <div class="single-offer center fadeInRight wow" data-wow-delay="0.5s" >
                     <div class="offer-sign">
                       національна віза
                     </div>
                     <div class="offer-desc">
-                      6 місяців - 5 років
+                      6 - 12 місяців
                     </div>
                   </div>
                 </a>
@@ -162,7 +182,7 @@
           <div class="col l4 m6 s12" style="margin: 0;padding: 0">
             <div class="country-main" style="background-image: url(img/bg/poland.jpg)">
               <div class="mask">
-                <a href="#">
+                <a href="poland.html">
                   <div class="country-name-min white-text">
                     ПОЛЬЩА
                   </div>
@@ -174,7 +194,7 @@
           <div class="col l4 m6 s12" style="margin: 0;padding: 0">
             <div class="country-main" style="background-image: url(img/bg/cheh.jpg)">
               <div class="mask">
-                <a href="#">
+                <a href="czhech.html">
                   <div class="country-name-min white-text">
                     ЧЕХІЯ
                   </div>
@@ -186,9 +206,9 @@
           <div class="col l4 m6 s12" style="margin: 0;padding: 0">
             <div class="country-main" style="background-image: url(img/bg/latvia.jpg)">
               <div class="mask">
-                <a href="#">
+                <a href="latvia.html">
                   <div class="country-name-min white-text">
-                    ЛАТВІЯ
+                    ЛИТВА
                   </div>
                 </a>
                 <a href="###" class="waves-effect black-text waves-light btn btn-country">безкоштовна консультація</a>
@@ -198,7 +218,7 @@
           <div class="col l4 m6 s12" style="margin: 0;padding: 0">
             <div class="country-main" style="background-image: url(img/bg/hungary.jpg)">
               <div class="mask">
-                <a href="#">
+                <a href="hungary.html">
                   <div class="country-name-min white-text">
                     УГОРЩИНА
                   </div>
@@ -210,7 +230,7 @@
           <div class="col l4 m6 s12" style="margin: 0;padding: 0">
             <div class="country-main" style="background-image: url(img/bg/spain.jpg)">
               <div class="mask">
-                <a href="#">
+                <a href="spain.html">
                   <div class="country-name-min white-text">
                     ІСПАНІЯ
                   </div>
@@ -222,7 +242,7 @@
           <div class="col l4 m6 s12" style="margin: 0;padding: 0">
             <div class="country-main" style="background-image: url(img/bg/holland.jpg)">
               <div class="mask">
-                <a href="#">
+                <a href="holland.html">
                   <div class="country-name-min white-text">
                     НІДЕРЛАНДИ
                   </div>
@@ -247,7 +267,7 @@
                 <div class="col l6 s12 m6"> 
 
                   <div class="imigration-offer ">
-                    <a href="#">
+                    <a href="business.html">
                       <div class="imigration-type">Реєстрація бізнесу</div>
                       <div class="imigration-desc">Під ключ</div>
                     </a>
@@ -256,7 +276,7 @@
                 </div>
                 <div class="col l6 s12 m6"> 
                   <div class="imigration-offer ">
-                    <a href="#">
+                    <a href="living.html">
                       <div class="imigration-type ">Вид на проживання</div>
                       <div class="imigration-desc">Надійно і швидко</div>
                     </a>
@@ -293,7 +313,7 @@
         <div class="line-main container team-block-pad">
           <div class="line-sign center ">НАША КОМАНДА</div>
           <div class="block-line "></div>
-          <div class="line-sign-third center">Думайте про подорорж - ми подбаємо про все інше</div>
+          <div class="line-sign-third center">Думайте про подорож - ми подбаємо про все інше</div>
         </div>
         <div class="row container center members">
           <div class="col l4 m6 s12">
@@ -349,7 +369,7 @@
                 <div class="col l4 m4 s12">
                   <div class="advantages-block">
                     <div class="advantages-img-three"></div>
-                    <div class="advantages-desc"><span class="advantages-number">10</span> <br>Зареєстрованих фірм у Польщі</div>
+                    <div class="advantages-desc"><span class="advantages-number">11</span> <br>Зареєстрованих фірм у Польщі</div>
                   </div>
                 </div>
               </div>
@@ -448,13 +468,19 @@
         <div class="copyright-info center"> <a href="#"> Made by Platform-IT Company</a></div>
       </div>
       <!-- menu-btn -->
-      <a id="menu-btn" class="waves-effect waves-light btn-large pulse btn-floating callback" >
+      <a id="menu-btn" class="waves-effect waves-light btn-large pulse btn-floating callback" href="#modal1">
         <img class="callback-image" src="img/pictures/telephone.svg" alt="callback">
       </a>
       <!--Import jQuery before materialize.js-->
       <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js" ></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.1/js/materialize.min.js"></script>
+      <script type="text/javascript">
+         $(document).ready(function(){
+    // the "href" attribute of .modal-trigger must specify the modal ID that wants to be triggered
+    $('.modal').modal();
+  });
+      </script>
       <script>
         new WOW().init();
       </script>
