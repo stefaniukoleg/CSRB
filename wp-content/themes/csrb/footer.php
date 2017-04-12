@@ -1,0 +1,103 @@
+<div id="nine">
+    <div class="parallax-container">
+        <div class="parallax">
+            <img src="<?php echo get_template_directory_uri(); ?>/img/bg/6.jpg" alt="parallax">
+            <div class="mask">
+                <div class="line-main container">
+                    <div class="line-sign center fot-form-sign white-text">ЗАМОВЛЯЙТЕ ВІЗУ</div>
+                    <div class="block-line white"></div>
+                    <div class="line-sign-third center white-text">Думайте про подорорж - ми подбаємо про все інше</div>
+                </div>
+                <div class="row container center">
+                    <div class="col offset-l2 l8 offset-l2"> 
+                        <form action="application.php" method="POST" id="application" class="fadeInRight wow" style="margin-top: 0" data-wow-delay="0.9s" name="application">
+                            <div class=" footer-form center">Залиште Ваші дані і ми зв'яжемося з Вами та дамо відповідь на любе питання</div>
+                            <input name="name" id="applicationName" maxlength="20" placeholder="Ваше і'мя" required/>
+                            <input name="email" type="email" id="applicationEmail" maxlength="20" placeholder="Ваш E-mail" required/>
+                            <input name="number" type="tel" id="applicationTelephone"  placeholder="Ваш номер телефону" required/>
+                            <button class="applicationButton black-text" type="submit" form="application">Безкоштовна консультація</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="copyright">
+    <div class="copyright-info center">
+        <a href="https://platform-it.com/"> Made by Platform-IT Company</a>
+    </div>
+</div>
+
+<!-- menu-btn -->
+<a id="menu-btn" class="waves-effect waves-light btn-large pulse btn-floating callback" href="#modal1">
+    <img class="callback-image" src="<?php echo get_template_directory_uri(); ?>/img/pictures/telephone.svg" alt="callback">
+</a>
+<!--Import jQuery before materialize.js-->
+<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js" ></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.1/js/materialize.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+// the "href" attribute of .modal-trigger must specify the modal ID that wants to be triggered
+$('.modal').modal();
+});
+</script>
+<script>
+new WOW().init();
+</script>
+<script> 
+$(document).ready(function(){
+$('.parallax').parallax();
+});
+</script>
+<script>
+var lastId,
+topMenu = $("#top-menu"),
+topMenuHeight = topMenu.outerHeight()+15,
+// All list items
+menuItems = topMenu.find("a"),
+// Anchors corresponding to menu items
+scrollItems = menuItems.map(function(){
+var item = $($(this).attr("href"));
+if (item.length) { return item; }
+});
+
+// Bind click handler to menu items
+// so we can get a fancy scroll animation
+menuItems.click(function(e){
+var href = $(this).attr("href"),
+offsetTop = href === "#" ? 0 : $(href).offset().top-topMenuHeight+1;
+$('html, body').stop().animate({ 
+scrollTop: offsetTop
+}, 300);
+e.preventDefault();
+});
+
+// Bind to scroll
+$(window).scroll(function(){
+// Get container scroll position
+var fromTop = $(this).scrollTop()+topMenuHeight;
+
+// Get id of current scroll item
+var cur = scrollItems.map(function(){
+if ($(this).offset().top < fromTop)
+return this;
+});
+// Get the id of the current element
+cur = cur[cur.length-1];
+var id = cur && cur.length ? cur[0].id : "";
+
+if (lastId !== id) {
+lastId = id;
+// Set/remove active class
+menuItems
+.parent().removeClass("active")
+.end().filter("[href='#"+id+"']").parent().addClass("active");
+}                   
+});
+</script>
+<script> $(".button-collapse").sideNav();</script>
+</body>
+</html>
