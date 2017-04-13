@@ -7,8 +7,12 @@
             echo '
             <div class="visa-first-block">
                 <div class="parallax-container visa-main">
-                    <div class="parallax">
-                        <img src="' . get_the_post_thumbnail_url() . '">
+                    <div class="parallax">';
+                        $img_id = get_post_meta( $post->ID, 'зображення_2', true );
+                        $img_url = wp_get_attachment_image_src( $img_id, 'large' );
+                        $img_url = $img_url[0];
+                        echo '
+                        <img src="' . $img_url . '">
                         <div class="mask-visa-first">
                             <div class="row container">
                                 <div class="col l12 m12 s12">
@@ -29,8 +33,12 @@
 
             <div class="single-block">
                 <div class="parallax-container container-mob-single">
-                    <div class="parallax">
-                        <img src="' . get_template_directory_uri() . '/img/bg/country-2.jpg" alt="parallax">
+                    <div class="parallax">';
+                        $img_id = get_post_meta( $post->ID, 'зображення_3', true );
+                        $img_url = wp_get_attachment_image_src( $img_id, 'large' );
+                        $img_url = $img_url[0];
+                        echo '
+                        <img src="' . $img_url . '" alt="parallax">
                         <div class="mask">
                             <div class="row container">
                                 <div class="col l12 s12 m12 center"> 

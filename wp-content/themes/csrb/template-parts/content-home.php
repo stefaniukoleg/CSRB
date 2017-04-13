@@ -99,89 +99,52 @@
 </div>
 
 <!-- countries block -->
-<div id="three" class="container">
-    <div class="line-main wow flipInY" data-wow-delay="0.2s" style="padding: 0;margin-bottom: 50px;padding-top: 20px">
-        <div class="line-sign">
-            <span class="small-word">АКТУАЛЬНІ НАПРЯМКИ</span>
-            <span class="line-sign right">КРАЇНИ</span>
-        </div>
-            <div class="block-line"></div>
-    </div>
-    <div class="row center" style="margin: 0;padding: 0">
-        <div class="col l4 m6 s12" style="margin: 0;padding: 0">
-            <div class="country-main" style="background-image: url(<?php echo get_template_directory_uri(); ?>/img/bg/poland.jpg)">
-                <div class="mask">
-                    <a href="<?php echo get_the_permalink(4); ?>">
-                        <div class="country-name-min white-text">
-                            ПОЛЬЩА
-                        </div>
-                    </a>
-                    <a href="###" class="waves-effect black-text waves-light btn btn-country">безкоштовна консультація</a>
+<?php
+    $args = array(
+        'post_type' => array('countries'),
+        'posts_per_page' => 6,
+        'publish' => true,
+        'orderby' => 'date',
+        'order' => 'DESC'
+    );
+    $post_count = 0;
+    $query = new WP_Query( $args );
+    if( $query->have_posts() ) {
+        echo '
+        <div id="three" class="container">
+            <div class="line-main wow flipInY" data-wow-delay="0.2s" style="padding: 0;margin-bottom: 50px;padding-top: 20px">
+                <div class="line-sign">
+                    <span class="small-word">АКТУАЛЬНІ НАПРЯМКИ</span>
+                    <span class="line-sign right">КРАЇНИ</span>
                 </div>
+                <div class="block-line"></div>
             </div>
-        </div>
-        <div class="col l4 m6 s12" style="margin: 0;padding: 0">
-            <div class="country-main" style="background-image: url(<?php echo get_template_directory_uri(); ?>/img/bg/cheh.jpg)">
-                <div class="mask">
-                    <a href="czhech.html">
-                        <div class="country-name-min white-text">
-                            ЧЕХІЯ
+            <div class="row center" style="margin: 0;padding: 0">';
+            while ( $query->have_posts() ) {
+                $query->the_post();
+                echo '
+                <div class="col l4 m6 s12" style="margin: 0;padding: 0">';
+                    $img_id = get_post_meta( $post->ID, 'зображення_1', true );
+                    $img_url = wp_get_attachment_image_src( $img_id, 'large' );
+                    $img_url = $img_url[0];
+                    echo '
+                    <div class="country-main" style="background-image: url(' . $img_url . ')">
+                        <div class="mask">
+                            <a href="' . get_the_permalink() . '">
+                                <div class="country-name-min white-text">' .
+                                    get_the_title() . '
+                                </div>
+                            </a>
+                            <a href="###" class="waves-effect black-text waves-light btn btn-country">безкоштовна консультація</a>
                         </div>
-                    </a>
-                    <a href="###" class="waves-effect black-text waves-light btn btn-country">безкоштовна консультація</a>
-                </div>
+                    </div>
+                </div>';
+            } //end while
+            echo '
             </div>
-        </div>
-        <div class="col l4 m6 s12" style="margin: 0;padding: 0">
-            <div class="country-main" style="background-image: url(<?php echo get_template_directory_uri(); ?>/img/bg/latvia.jpg)">
-                <div class="mask">
-                    <a href="litva.html">
-                        <div class="country-name-min white-text">
-                            ЛИТВА
-                        </div>
-                    </a>
-                    <a href="###" class="waves-effect black-text waves-light btn btn-country">безкоштовна консультація</a>
-                </div>
-            </div>
-        </div>
-        <div class="col l4 m6 s12" style="margin: 0;padding: 0">
-            <div class="country-main" style="background-image: url(<?php echo get_template_directory_uri(); ?>/img/bg/hungary.jpg)">
-                <div class="mask">
-                    <a href="hungary.html">
-                        <div class="country-name-min white-text">
-                            УГОРЩИНА
-                        </div>
-                    </a>
-                    <a href="###" class="waves-effect black-text waves-light btn btn-country">безкоштовна консультація</a>
-                </div>
-            </div>
-        </div>
-        <div class="col l4 m6 s12" style="margin: 0;padding: 0">
-            <div class="country-main" style="background-image: url(<?php echo get_template_directory_uri(); ?>/img/bg/spain.jpg)">
-                <div class="mask">
-                    <a href="spain.html">
-                        <div class="country-name-min white-text">
-                            ІСПАНІЯ
-                        </div>
-                    </a>
-                    <a href="###" class="waves-effect black-text waves-light btn btn-country">безкоштовна консультація</a>
-                </div>
-            </div>
-        </div>
-        <div class="col l4 m6 s12" style="margin: 0;padding: 0">
-            <div class="country-main" style="background-image: url(<?php echo get_template_directory_uri(); ?>/img/bg/holland.jpg)">
-                <div class="mask">
-                    <a href="holland.html">
-                        <div class="country-name-min white-text">
-                            НІДЕРЛАНДИ
-                        </div>
-                    </a>
-                    <a href="###" class="waves-effect black-text waves-light btn btn-country">безкоштовна консультація</a>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
+        </div>';
+    } //end if
+?>
 
 <!--  imigration block -->
 <div id="four" class="imigration-block">
