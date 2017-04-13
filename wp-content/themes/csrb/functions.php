@@ -5,6 +5,9 @@
     //custom capabilityes
     require 'template-parts/custom-posts-types.php';
 
+	//custom-taxonomy
+    require 'template-parts/custom-taxonomy.php';
+
 	//add_image_size('600x400', 600, 400, true); // додаємо ще один розмір картинок 600x400 з обрізанням
 
 	function short_post_desc( $charlength ) {        //function for display short content for posts

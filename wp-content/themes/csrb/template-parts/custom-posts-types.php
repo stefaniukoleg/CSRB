@@ -5,7 +5,7 @@
         $labels = array( 
             'name' => _x( 'Візи', 'visas' ),
             'singular_name' => _x( 'Віза', 'visas' ),
-            'add_new' => _x( 'Додати вуз', 'visas' ),
+            'add_new' => _x( 'Додати візу', 'visas' ),
             'add_new_item' => _x( 'Додати нові візи ', 'visas' ),
             'edit_item' => _x( 'Редагувати візу', 'visas' ),
             'new_item' => _x( 'Нові візи', 'visas' ),
@@ -41,7 +41,7 @@
             'map_meta_cap' => true,
             'hierarchical' => true,
             'supports' => array( 'title', 'thumbnail', 'editor', 'revisions' ), // 'author', 'comments'
-            'taxonomies' => array( 'category' ), //'post_tag', 
+            //'taxonomies' => array( 'post_tag', 'category' ), 
             'has_archive' => true,
             'rewrite' => true,
             'query_var' => true,
@@ -94,7 +94,7 @@
             'map_meta_cap' => true,
             'hierarchical' => true,
             'supports' => array( 'title', 'thumbnail', 'editor', 'revisions' ), // 'author', 'comments'
-            'taxonomies' => array( 'category' ), //'post_tag', 
+            //'taxonomies' => array( 'post_tag', 'category' ),
             'has_archive' => true,
             'rewrite' => true,
             'query_var' => true,
@@ -147,7 +147,7 @@
             'map_meta_cap' => true,
             'hierarchical' => true,
             'supports' => array( 'title', 'thumbnail', 'editor', 'revisions' ), // 'author', 'comments'
-            'taxonomies' => array( 'category' ), //'post_tag', 
+            //'taxonomies' => array( 'post_tag', 'category' ),
             'has_archive' => true,
             'rewrite' => true,
             'query_var' => true,
@@ -200,7 +200,7 @@
             'map_meta_cap' => true,
             'hierarchical' => true,
             'supports' => array( 'title', 'thumbnail', 'editor', 'revisions' ), // 'author', 'comments'
-            'taxonomies' => array( 'category' ), //'post_tag', 
+            //'taxonomies' => array( 'post_tag', 'category' ),
             'has_archive' => true,
             'rewrite' => true,
             'query_var' => true,
@@ -252,8 +252,8 @@
             ),
             'map_meta_cap' => true,
             'hierarchical' => true,
-            'supports' => array( 'title', 'thumbnail', 'editor', 'revisions' ), // 'author', 'comments'
-            'taxonomies' => array( 'category' ), //'post_tag', 
+            'supports' => array( 'title', 'editor', 'revisions' ), // 'author', 'comments', 'thumbnail'
+            //'taxonomies' => array( 'post_tag', 'category' ),
             'has_archive' => true,
             'rewrite' => true,
             'query_var' => true,

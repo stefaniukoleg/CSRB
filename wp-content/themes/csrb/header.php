@@ -64,11 +64,11 @@
                 <img class="lang-img" src="<?php echo get_template_directory_uri(); ?>/img/languages/ukr.svg" alt="logo">
             </div>
             <ul id="top-menu" class="left menu-block hide-on-med-and-down">
-                <li><a href="#two">Візи</a></li>
-                <li><a href="#three">Країни</a></li>
-                <li><a href="#four">Іміграція</a></li>
-                <li><a href="#six">Команда</a></li>
-                <li><a href="#eight">Контакти</a></li>
+                <li><a href="<?php echo get_home_url(); ?>/#two">Візи</a></li>
+                <li><a href="<?php echo get_home_url(); ?>/#three">Країни</a></li>
+                <li><a href="<?php echo get_home_url(); ?>/#four">Іміграція</a></li>
+                <li><a href="<?php echo get_home_url(); ?>/#six">Команда</a></li>
+                <li><a href="<?php echo get_home_url(); ?>/#eight">Контакти</a></li>
             </ul>
             <ul>
                 <li>
