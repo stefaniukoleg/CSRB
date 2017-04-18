@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.4.15.5
+-- version 4.4.15.7
 -- http://www.phpmyadmin.net
 --
 -- Хост: 127.0.0.1:3306
--- Час створення: Квт 18 2017 р., 16:04
--- Версія сервера: 5.5.48
--- Версія PHP: 5.6.19
+-- Час створення: Квт 19 2017 р., 00:22
+-- Версія сервера: 5.5.50
+-- Версія PHP: 5.6.23
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -105,7 +105,7 @@ CREATE TABLE IF NOT EXISTS `cs_options` (
   `option_name` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
   `option_value` longtext COLLATE utf8mb4_unicode_ci NOT NULL,
   `autoload` varchar(20) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT 'yes'
-) ENGINE=InnoDB AUTO_INCREMENT=252 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=262 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Дамп даних таблиці `cs_options`
@@ -216,10 +216,8 @@ INSERT INTO `cs_options` (`option_id`, `option_name`, `option_value`, `autoload`
 (102, 'widget_calendar', 'a:1:{s:12:"_multiwidget";i:1;}', 'yes'),
 (103, 'widget_tag_cloud', 'a:1:{s:12:"_multiwidget";i:1;}', 'yes'),
 (104, 'widget_nav_menu', 'a:1:{s:12:"_multiwidget";i:1;}', 'yes'),
-(105, 'cron', 'a:4:{i:1492539673;a:3:{s:16:"wp_version_check";a:1:{s:32:"40cd750bba9870f18aada2478b24840a";a:3:{s:8:"schedule";s:10:"twicedaily";s:4:"args";a:0:{}s:8:"interval";i:43200;}}s:17:"wp_update_plugins";a:1:{s:32:"40cd750bba9870f18aada2478b24840a";a:3:{s:8:"schedule";s:10:"twicedaily";s:4:"args";a:0:{}s:8:"interval";i:43200;}}s:16:"wp_update_themes";a:1:{s:32:"40cd750bba9870f18aada2478b24840a";a:3:{s:8:"schedule";s:10:"twicedaily";s:4:"args";a:0:{}s:8:"interval";i:43200;}}}i:1492539749;a:1:{s:19:"wp_scheduled_delete";a:1:{s:32:"40cd750bba9870f18aada2478b24840a";a:3:{s:8:"schedule";s:5:"daily";s:4:"args";a:0:{}s:8:"interval";i:86400;}}}i:1492603174;a:1:{s:30:"wp_scheduled_auto_draft_delete";a:1:{s:32:"40cd750bba9870f18aada2478b24840a";a:3:{s:8:"schedule";s:5:"daily";s:4:"args";a:0:{}s:8:"interval";i:86400;}}}s:7:"version";i:2;}', 'yes'),
+(105, 'cron', 'a:4:{i:1492582873;a:3:{s:16:"wp_version_check";a:1:{s:32:"40cd750bba9870f18aada2478b24840a";a:3:{s:8:"schedule";s:10:"twicedaily";s:4:"args";a:0:{}s:8:"interval";i:43200;}}s:17:"wp_update_plugins";a:1:{s:32:"40cd750bba9870f18aada2478b24840a";a:3:{s:8:"schedule";s:10:"twicedaily";s:4:"args";a:0:{}s:8:"interval";i:43200;}}s:16:"wp_update_themes";a:1:{s:32:"40cd750bba9870f18aada2478b24840a";a:3:{s:8:"schedule";s:10:"twicedaily";s:4:"args";a:0:{}s:8:"interval";i:43200;}}}i:1492603174;a:1:{s:30:"wp_scheduled_auto_draft_delete";a:1:{s:32:"40cd750bba9870f18aada2478b24840a";a:3:{s:8:"schedule";s:5:"daily";s:4:"args";a:0:{}s:8:"interval";i:86400;}}}i:1492626149;a:1:{s:19:"wp_scheduled_delete";a:1:{s:32:"40cd750bba9870f18aada2478b24840a";a:3:{s:8:"schedule";s:5:"daily";s:4:"args";a:0:{}s:8:"interval";i:86400;}}}s:7:"version";i:2;}', 'yes'),
 (106, 'theme_mods_twentyseventeen', 'a:2:{s:18:"custom_css_post_id";i:-1;s:16:"sidebars_widgets";a:2:{s:4:"time";i:1492021674;s:4:"data";a:4:{s:19:"wp_inactive_widgets";a:0:{}s:9:"sidebar-1";a:6:{i:0;s:8:"search-2";i:1;s:14:"recent-posts-2";i:2;s:17:"recent-comments-2";i:3;s:10:"archives-2";i:4;s:12:"categories-2";i:5;s:6:"meta-2";}s:9:"sidebar-2";a:0:{}s:9:"sidebar-3";a:0:{}}}}', 'yes'),
-(110, '_site_transient_update_core', 'O:8:"stdClass":4:{s:7:"updates";a:1:{i:0;O:8:"stdClass":10:{s:8:"response";s:6:"latest";s:8:"download";s:62:"https://downloads.wordpress.org/release/uk/wordpress-4.7.3.zip";s:6:"locale";s:2:"uk";s:8:"packages";O:8:"stdClass":5:{s:4:"full";s:62:"https://downloads.wordpress.org/release/uk/wordpress-4.7.3.zip";s:10:"no_content";b:0;s:11:"new_bundled";b:0;s:7:"partial";b:0;s:8:"rollback";b:0;}s:7:"current";s:5:"4.7.3";s:7:"version";s:5:"4.7.3";s:11:"php_version";s:5:"5.2.4";s:13:"mysql_version";s:3:"5.0";s:11:"new_bundled";s:3:"4.7";s:15:"partial_version";s:0:"";}}s:12:"last_checked";i:1492513997;s:15:"version_checked";s:5:"4.7.3";s:12:"translations";a:0:{}}', 'no'),
-(117, '_site_transient_update_themes', 'O:8:"stdClass":4:{s:12:"last_checked";i:1492514000;s:7:"checked";a:4:{s:4:"csrb";s:3:"1.0";s:13:"twentyfifteen";s:3:"1.7";s:15:"twentyseventeen";s:3:"1.1";s:13:"twentysixteen";s:3:"1.3";}s:8:"response";a:0:{}s:12:"translations";a:0:{}}', 'no'),
 (120, '_site_transient_timeout_browser_1112e7da2c1e2ca5eb7e4651881e05db', '1492626079', 'no'),
 (121, '_site_transient_browser_1112e7da2c1e2ca5eb7e4651881e05db', 'a:9:{s:8:"platform";s:7:"Windows";s:4:"name";s:6:"Chrome";s:7:"version";s:13:"57.0.2987.133";s:10:"update_url";s:28:"http://www.google.com/chrome";s:7:"img_src";s:49:"http://s.wordpress.org/images/browsers/chrome.png";s:11:"img_src_ssl";s:48:"https://wordpress.org/images/browsers/chrome.png";s:15:"current_version";s:2:"18";s:7:"upgrade";b:0;s:8:"insecure";b:0;}', 'no'),
 (122, 'can_compress_scripts', '1', 'no'),
@@ -262,7 +260,6 @@ INSERT INTO `cs_options` (`option_id`, `option_name`, `option_value`, `autoload`
 (187, '_transient_timeout_ure_public_post_types', '1492033371', 'no'),
 (188, '_transient_ure_public_post_types', 'a:10:{s:4:"post";s:4:"post";s:4:"page";s:4:"page";s:10:"attachment";s:10:"attachment";s:3:"acf";s:3:"acf";s:5:"visas";s:5:"visas";s:9:"countries";s:9:"countries";s:12:"immigrations";s:12:"immigrations";s:4:"team";s:4:"team";s:7:"actions";s:7:"actions";s:13:"contact_infos";s:13:"contact_infos";}', 'no'),
 (193, 'category_children', 'a:0:{}', 'yes'),
-(196, 'visa_type_children', 'a:0:{}', 'yes'),
 (203, 'duplicate_post_copytitle', '1', 'yes'),
 (204, 'duplicate_post_copydate', '', 'yes'),
 (205, 'duplicate_post_copystatus', '', 'yes'),
@@ -295,10 +292,13 @@ INSERT INTO `cs_options` (`option_id`, `option_name`, `option_value`, `autoload`
 (244, '_site_transient_timeout_poptags_40cd750bba9870f18aada2478b24840a', '1492524772', 'no');
 INSERT INTO `cs_options` (`option_id`, `option_name`, `option_value`, `autoload`) VALUES
 (245, '_site_transient_poptags_40cd750bba9870f18aada2478b24840a', 'O:8:"stdClass":100:{s:6:"widget";a:3:{s:4:"name";s:6:"widget";s:4:"slug";s:6:"widget";s:5:"count";i:4329;}s:4:"post";a:3:{s:4:"name";s:4:"post";s:4:"slug";s:4:"post";s:5:"count";i:2469;}s:5:"admin";a:3:{s:4:"name";s:5:"admin";s:4:"slug";s:5:"admin";s:5:"count";i:2343;}s:11:"woocommerce";a:3:{s:4:"name";s:11:"woocommerce";s:4:"slug";s:11:"woocommerce";s:5:"count";i:2005;}s:5:"posts";a:3:{s:4:"name";s:5:"posts";s:4:"slug";s:5:"posts";s:5:"count";i:1813;}s:8:"comments";a:3:{s:4:"name";s:8:"comments";s:4:"slug";s:8:"comments";s:5:"count";i:1572;}s:9:"shortcode";a:3:{s:4:"name";s:9:"shortcode";s:4:"slug";s:9:"shortcode";s:5:"count";i:1538;}s:7:"twitter";a:3:{s:4:"name";s:7:"twitter";s:4:"slug";s:7:"twitter";s:5:"count";i:1422;}s:6:"google";a:3:{s:4:"name";s:6:"google";s:4:"slug";s:6:"google";s:5:"count";i:1321;}s:6:"images";a:3:{s:4:"name";s:6:"images";s:4:"slug";s:6:"images";s:5:"count";i:1315;}s:8:"facebook";a:3:{s:4:"name";s:8:"facebook";s:4:"slug";s:8:"facebook";s:5:"count";i:1301;}s:7:"sidebar";a:3:{s:4:"name";s:7:"sidebar";s:4:"slug";s:7:"sidebar";s:5:"count";i:1265;}s:5:"image";a:3:{s:4:"name";s:5:"image";s:4:"slug";s:5:"image";s:5:"count";i:1249;}s:3:"seo";a:3:{s:4:"name";s:3:"seo";s:4:"slug";s:3:"seo";s:5:"count";i:1085;}s:4:"page";a:3:{s:4:"name";s:4:"page";s:4:"slug";s:4:"page";s:5:"count";i:1036;}s:7:"gallery";a:3:{s:4:"name";s:7:"gallery";s:4:"slug";s:7:"gallery";s:5:"count";i:1025;}s:6:"social";a:3:{s:4:"name";s:6:"social";s:4:"slug";s:6:"social";s:5:"count";i:976;}s:5:"email";a:3:{s:4:"name";s:5:"email";s:4:"slug";s:5:"email";s:5:"count";i:909;}s:5:"links";a:3:{s:4:"name";s:5:"links";s:4:"slug";s:5:"links";s:5:"count";i:810;}s:9:"ecommerce";a:3:{s:4:"name";s:9:"ecommerce";s:4:"slug";s:9:"ecommerce";s:5:"count";i:780;}s:5:"login";a:3:{s:4:"name";s:5:"login";s:4:"slug";s:5:"login";s:5:"count";i:774;}s:7:"widgets";a:3:{s:4:"name";s:7:"widgets";s:4:"slug";s:7:"widgets";s:5:"count";i:759;}s:5:"video";a:3:{s:4:"name";s:5:"video";s:4:"slug";s:5:"video";s:5:"count";i:749;}s:3:"rss";a:3:{s:4:"name";s:3:"rss";s:4:"slug";s:3:"rss";s:5:"count";i:663;}s:10:"buddypress";a:3:{s:4:"name";s:10:"buddypress";s:4:"slug";s:10:"buddypress";s:5:"count";i:651;}s:7:"content";a:3:{s:4:"name";s:7:"content";s:4:"slug";s:7:"content";s:5:"count";i:641;}s:5:"pages";a:3:{s:4:"name";s:5:"pages";s:4:"slug";s:5:"pages";s:5:"count";i:638;}s:4:"spam";a:3:{s:4:"name";s:4:"spam";s:4:"slug";s:4:"spam";s:5:"count";i:636;}s:6:"jquery";a:3:{s:4:"name";s:6:"jquery";s:4:"slug";s:6:"jquery";s:5:"count";i:632;}s:8:"security";a:3:{s:4:"name";s:8:"security";s:4:"slug";s:8:"security";s:5:"count";i:611;}s:4:"ajax";a:3:{s:4:"name";s:4:"ajax";s:4:"slug";s:4:"ajax";s:5:"count";i:589;}s:6:"slider";a:3:{s:4:"name";s:6:"slider";s:4:"slug";s:6:"slider";s:5:"count";i:588;}s:5:"media";a:3:{s:4:"name";s:5:"media";s:4:"slug";s:5:"media";s:5:"count";i:585;}s:8:"category";a:3:{s:4:"name";s:8:"category";s:4:"slug";s:8:"category";s:5:"count";i:566;}s:4:"feed";a:3:{s:4:"name";s:4:"feed";s:4:"slug";s:4:"feed";s:5:"count";i:565;}s:6:"search";a:3:{s:4:"name";s:6:"search";s:4:"slug";s:6:"search";s:5:"count";i:559;}s:9:"analytics";a:3:{s:4:"name";s:9:"analytics";s:4:"slug";s:9:"analytics";s:5:"count";i:557;}s:10:"e-commerce";a:3:{s:4:"name";s:10:"e-commerce";s:4:"slug";s:10:"e-commerce";s:5:"count";i:551;}s:4:"menu";a:3:{s:4:"name";s:4:"menu";s:4:"slug";s:4:"menu";s:5:"count";i:539;}s:5:"embed";a:3:{s:4:"name";s:5:"embed";s:4:"slug";s:5:"embed";s:5:"count";i:531;}s:10:"javascript";a:3:{s:4:"name";s:10:"javascript";s:4:"slug";s:10:"javascript";s:5:"count";i:519;}s:4:"link";a:3:{s:4:"name";s:4:"link";s:4:"slug";s:4:"link";s:5:"count";i:517;}s:4:"form";a:3:{s:4:"name";s:4:"form";s:4:"slug";s:4:"form";s:5:"count";i:508;}s:3:"css";a:3:{s:4:"name";s:3:"css";s:4:"slug";s:3:"css";s:5:"count";i:496;}s:5:"share";a:3:{s:4:"name";s:5:"share";s:4:"slug";s:5:"share";s:5:"count";i:489;}s:7:"comment";a:3:{s:4:"name";s:7:"comment";s:4:"slug";s:7:"comment";s:5:"count";i:485;}s:7:"youtube";a:3:{s:4:"name";s:7:"youtube";s:4:"slug";s:7:"youtube";s:5:"count";i:481;}s:5:"theme";a:3:{s:4:"name";s:5:"theme";s:4:"slug";s:5:"theme";s:5:"count";i:470;}s:6:"custom";a:3:{s:4:"name";s:6:"custom";s:4:"slug";s:6:"custom";s:5:"count";i:460;}s:10:"categories";a:3:{s:4:"name";s:10:"categories";s:4:"slug";s:10:"categories";s:5:"count";i:458;}s:10:"responsive";a:3:{s:4:"name";s:10:"responsive";s:4:"slug";s:10:"responsive";s:5:"count";i:456;}s:9:"dashboard";a:3:{s:4:"name";s:9:"dashboard";s:4:"slug";s:9:"dashboard";s:5:"count";i:452;}s:3:"ads";a:3:{s:4:"name";s:3:"ads";s:4:"slug";s:3:"ads";s:5:"count";i:440;}s:6:"button";a:3:{s:4:"name";s:6:"button";s:4:"slug";s:6:"button";s:5:"count";i:434;}s:4:"tags";a:3:{s:4:"name";s:4:"tags";s:4:"slug";s:4:"tags";s:5:"count";i:428;}s:9:"affiliate";a:3:{s:4:"name";s:9:"affiliate";s:4:"slug";s:9:"affiliate";s:5:"count";i:428;}s:6:"editor";a:3:{s:4:"name";s:6:"editor";s:4:"slug";s:6:"editor";s:5:"count";i:420;}s:5:"photo";a:3:{s:4:"name";s:5:"photo";s:4:"slug";s:5:"photo";s:5:"count";i:415;}s:4:"user";a:3:{s:4:"name";s:4:"user";s:4:"slug";s:4:"user";s:5:"count";i:406;}s:9:"slideshow";a:3:{s:4:"name";s:9:"slideshow";s:4:"slug";s:9:"slideshow";s:5:"count";i:399;}s:5:"stats";a:3:{s:4:"name";s:5:"stats";s:4:"slug";s:5:"stats";s:5:"count";i:398;}s:6:"mobile";a:3:{s:4:"name";s:6:"mobile";s:4:"slug";s:6:"mobile";s:5:"count";i:396;}s:12:"contact-form";a:3:{s:4:"name";s:12:"contact form";s:4:"slug";s:12:"contact-form";s:5:"count";i:396;}s:7:"contact";a:3:{s:4:"name";s:7:"contact";s:4:"slug";s:7:"contact";s:5:"count";i:392;}s:5:"users";a:3:{s:4:"name";s:5:"users";s:4:"slug";s:5:"users";s:5:"count";i:391;}s:6:"photos";a:3:{s:4:"name";s:6:"photos";s:4:"slug";s:6:"photos";s:5:"count";i:389;}s:10:"statistics";a:3:{s:4:"name";s:10:"statistics";s:4:"slug";s:10:"statistics";s:5:"count";i:373;}s:3:"api";a:3:{s:4:"name";s:3:"api";s:4:"slug";s:3:"api";s:5:"count";i:367;}s:10:"navigation";a:3:{s:4:"name";s:10:"navigation";s:4:"slug";s:10:"navigation";s:5:"count";i:359;}s:6:"events";a:3:{s:4:"name";s:6:"events";s:4:"slug";s:6:"events";s:5:"count";i:357;}s:4:"news";a:3:{s:4:"name";s:4:"news";s:4:"slug";s:4:"news";s:5:"count";i:345;}s:12:"social-media";a:3:{s:4:"name";s:12:"social media";s:4:"slug";s:12:"social-media";s:5:"count";i:330;}s:8:"calendar";a:3:{s:4:"name";s:8:"calendar";s:4:"slug";s:8:"calendar";s:5:"count";i:330;}s:7:"plugins";a:3:{s:4:"name";s:7:"plugins";s:4:"slug";s:7:"plugins";s:5:"count";i:327;}s:9:"multisite";a:3:{s:4:"name";s:9:"multisite";s:4:"slug";s:9:"multisite";s:5:"count";i:325;}s:10:"shortcodes";a:3:{s:4:"name";s:10:"shortcodes";s:4:"slug";s:10:"shortcodes";s:5:"count";i:321;}s:4:"meta";a:3:{s:4:"name";s:4:"meta";s:4:"slug";s:4:"meta";s:5:"count";i:318;}s:4:"code";a:3:{s:4:"name";s:4:"code";s:4:"slug";s:4:"code";s:5:"count";i:318;}s:4:"list";a:3:{s:4:"name";s:4:"list";s:4:"slug";s:4:"list";s:5:"count";i:316;}s:3:"url";a:3:{s:4:"name";s:3:"url";s:4:"slug";s:3:"url";s:5:"count";i:313;}s:10:"newsletter";a:3:{s:4:"name";s:10:"newsletter";s:4:"slug";s:10:"newsletter";s:5:"count";i:305;}s:7:"payment";a:3:{s:4:"name";s:7:"payment";s:4:"slug";s:7:"payment";s:5:"count";i:303;}s:6:"simple";a:3:{s:4:"name";s:6:"simple";s:4:"slug";s:6:"simple";s:5:"count";i:290;}s:3:"tag";a:3:{s:4:"name";s:3:"tag";s:4:"slug";s:3:"tag";s:5:"count";i:289;}s:5:"popup";a:3:{s:4:"name";s:5:"popup";s:4:"slug";s:5:"popup";s:5:"count";i:286;}s:9:"marketing";a:3:{s:4:"name";s:9:"marketing";s:4:"slug";s:9:"marketing";s:5:"count";i:284;}s:16:"custom-post-type";a:3:{s:4:"name";s:16:"custom post type";s:4:"slug";s:16:"custom-post-type";s:5:"count";i:283;}s:4:"chat";a:3:{s:4:"name";s:4:"chat";s:4:"slug";s:4:"chat";s:5:"count";i:278;}s:8:"redirect";a:3:{s:4:"name";s:8:"redirect";s:4:"slug";s:8:"redirect";s:5:"count";i:278;}s:11:"advertising";a:3:{s:4:"name";s:11:"advertising";s:4:"slug";s:11:"advertising";s:5:"count";i:276;}s:6:"author";a:3:{s:4:"name";s:6:"author";s:4:"slug";s:6:"author";s:5:"count";i:276;}s:7:"adsense";a:3:{s:4:"name";s:7:"adsense";s:4:"slug";s:7:"adsense";s:5:"count";i:270;}s:4:"html";a:3:{s:4:"name";s:4:"html";s:4:"slug";s:4:"html";s:5:"count";i:268;}s:5:"forms";a:3:{s:4:"name";s:5:"forms";s:4:"slug";s:5:"forms";s:5:"count";i:265;}s:7:"captcha";a:3:{s:4:"name";s:7:"captcha";s:4:"slug";s:7:"captcha";s:5:"count";i:263;}s:8:"lightbox";a:3:{s:4:"name";s:8:"lightbox";s:4:"slug";s:8:"lightbox";s:5:"count";i:263;}s:14:"administration";a:3:{s:4:"name";s:14:"administration";s:4:"slug";s:14:"administration";s:5:"count";i:261;}s:12:"notification";a:3:{s:4:"name";s:12:"notification";s:4:"slug";s:12:"notification";s:5:"count";i:260;}s:7:"tinymce";a:3:{s:4:"name";s:7:"tinyMCE";s:4:"slug";s:7:"tinymce";s:5:"count";i:260;}s:15:"payment-gateway";a:3:{s:4:"name";s:15:"payment gateway";s:4:"slug";s:15:"payment-gateway";s:5:"count";i:260;}}', 'no'),
-(247, '_site_transient_timeout_theme_roots', '1492515798', 'no'),
-(248, '_site_transient_theme_roots', 'a:4:{s:4:"csrb";s:7:"/themes";s:13:"twentyfifteen";s:7:"/themes";s:15:"twentyseventeen";s:7:"/themes";s:13:"twentysixteen";s:7:"/themes";}', 'no'),
-(249, '_site_transient_update_plugins', 'O:8:"stdClass":5:{s:12:"last_checked";i:1492514006;s:7:"checked";a:6:{s:30:"advanced-custom-fields/acf.php";s:6:"4.4.11";s:19:"akismet/akismet.php";s:3:"3.3";s:36:"contact-form-7/wp-contact-form-7.php";s:3:"4.7";s:22:"cyr3lat/cyr-to-lat.php";s:3:"3.5";s:33:"duplicate-post/duplicate-post.php";s:3:"3.2";s:37:"user-role-editor/user-role-editor.php";s:6:"4.32.3";}s:8:"response";a:0:{}s:12:"translations";a:1:{i:0;a:7:{s:4:"type";s:6:"plugin";s:4:"slug";s:14:"contact-form-7";s:8:"language";s:2:"uk";s:7:"version";s:3:"4.7";s:7:"updated";s:19:"2017-03-16 17:31:43";s:7:"package";s:76:"https://downloads.wordpress.org/translation/plugin/contact-form-7/4.7/uk.zip";s:10:"autoupdate";b:1;}}s:9:"no_update";a:6:{s:30:"advanced-custom-fields/acf.php";O:8:"stdClass":6:{s:2:"id";s:5:"21367";s:4:"slug";s:22:"advanced-custom-fields";s:6:"plugin";s:30:"advanced-custom-fields/acf.php";s:11:"new_version";s:6:"4.4.11";s:3:"url";s:53:"https://wordpress.org/plugins/advanced-custom-fields/";s:7:"package";s:72:"https://downloads.wordpress.org/plugin/advanced-custom-fields.4.4.11.zip";}s:19:"akismet/akismet.php";O:8:"stdClass":6:{s:2:"id";s:2:"15";s:4:"slug";s:7:"akismet";s:6:"plugin";s:19:"akismet/akismet.php";s:11:"new_version";s:3:"3.3";s:3:"url";s:38:"https://wordpress.org/plugins/akismet/";s:7:"package";s:54:"https://downloads.wordpress.org/plugin/akismet.3.3.zip";}s:36:"contact-form-7/wp-contact-form-7.php";O:8:"stdClass":6:{s:2:"id";s:3:"790";s:4:"slug";s:14:"contact-form-7";s:6:"plugin";s:36:"contact-form-7/wp-contact-form-7.php";s:11:"new_version";s:3:"4.7";s:3:"url";s:45:"https://wordpress.org/plugins/contact-form-7/";s:7:"package";s:61:"https://downloads.wordpress.org/plugin/contact-form-7.4.7.zip";}s:22:"cyr3lat/cyr-to-lat.php";O:8:"stdClass":6:{s:2:"id";s:5:"23472";s:4:"slug";s:7:"cyr3lat";s:6:"plugin";s:22:"cyr3lat/cyr-to-lat.php";s:11:"new_version";s:3:"3.5";s:3:"url";s:38:"https://wordpress.org/plugins/cyr3lat/";s:7:"package";s:54:"https://downloads.wordpress.org/plugin/cyr3lat.3.5.zip";}s:33:"duplicate-post/duplicate-post.php";O:8:"stdClass":7:{s:2:"id";s:4:"1295";s:4:"slug";s:14:"duplicate-post";s:6:"plugin";s:33:"duplicate-post/duplicate-post.php";s:11:"new_version";s:3:"3.2";s:3:"url";s:45:"https://wordpress.org/plugins/duplicate-post/";s:7:"package";s:61:"https://downloads.wordpress.org/plugin/duplicate-post.3.2.zip";s:14:"upgrade_notice";s:48:"new website + WPML compatibility + various fixes";}s:37:"user-role-editor/user-role-editor.php";O:8:"stdClass":6:{s:2:"id";s:5:"13697";s:4:"slug";s:16:"user-role-editor";s:6:"plugin";s:37:"user-role-editor/user-role-editor.php";s:11:"new_version";s:6:"4.32.3";s:3:"url";s:47:"https://wordpress.org/plugins/user-role-editor/";s:7:"package";s:66:"https://downloads.wordpress.org/plugin/user-role-editor.4.32.3.zip";}}}', 'no'),
-(250, 'wpcf7', 'a:2:{s:7:"version";s:3:"4.7";s:13:"bulk_validate";a:4:{s:9:"timestamp";d:1492524807;s:7:"version";s:3:"4.7";s:11:"count_valid";i:1;s:13:"count_invalid";i:0;}}', 'yes');
+(250, 'wpcf7', 'a:2:{s:7:"version";s:3:"4.7";s:13:"bulk_validate";a:4:{s:9:"timestamp";d:1492524807;s:7:"version";s:3:"4.7";s:11:"count_valid";i:1;s:13:"count_invalid";i:0;}}', 'yes'),
+(254, '_site_transient_timeout_theme_roots', '1492545234', 'no'),
+(255, '_site_transient_theme_roots', 'a:4:{s:4:"csrb";s:7:"/themes";s:13:"twentyfifteen";s:7:"/themes";s:15:"twentyseventeen";s:7:"/themes";s:13:"twentysixteen";s:7:"/themes";}', 'no'),
+(256, '_site_transient_update_core', 'O:8:"stdClass":4:{s:7:"updates";a:1:{i:0;O:8:"stdClass":10:{s:8:"response";s:6:"latest";s:8:"download";s:62:"https://downloads.wordpress.org/release/uk/wordpress-4.7.3.zip";s:6:"locale";s:2:"uk";s:8:"packages";O:8:"stdClass":5:{s:4:"full";s:62:"https://downloads.wordpress.org/release/uk/wordpress-4.7.3.zip";s:10:"no_content";b:0;s:11:"new_bundled";b:0;s:7:"partial";b:0;s:8:"rollback";b:0;}s:7:"current";s:5:"4.7.3";s:7:"version";s:5:"4.7.3";s:11:"php_version";s:5:"5.2.4";s:13:"mysql_version";s:3:"5.0";s:11:"new_bundled";s:3:"4.7";s:15:"partial_version";s:0:"";}}s:12:"last_checked";i:1492543438;s:15:"version_checked";s:5:"4.7.3";s:12:"translations";a:0:{}}', 'no'),
+(257, '_site_transient_update_themes', 'O:8:"stdClass":4:{s:12:"last_checked";i:1492543444;s:7:"checked";a:4:{s:4:"csrb";s:3:"1.0";s:13:"twentyfifteen";s:3:"1.7";s:15:"twentyseventeen";s:3:"1.1";s:13:"twentysixteen";s:3:"1.3";}s:8:"response";a:0:{}s:12:"translations";a:0:{}}', 'no'),
+(258, '_site_transient_update_plugins', 'O:8:"stdClass":4:{s:12:"last_checked";i:1492543442;s:8:"response";a:0:{}s:12:"translations";a:1:{i:0;a:7:{s:4:"type";s:6:"plugin";s:4:"slug";s:14:"contact-form-7";s:8:"language";s:2:"uk";s:7:"version";s:3:"4.7";s:7:"updated";s:19:"2017-03-16 17:31:43";s:7:"package";s:76:"https://downloads.wordpress.org/translation/plugin/contact-form-7/4.7/uk.zip";s:10:"autoupdate";b:1;}}s:9:"no_update";a:6:{s:30:"advanced-custom-fields/acf.php";O:8:"stdClass":6:{s:2:"id";s:5:"21367";s:4:"slug";s:22:"advanced-custom-fields";s:6:"plugin";s:30:"advanced-custom-fields/acf.php";s:11:"new_version";s:6:"4.4.11";s:3:"url";s:53:"https://wordpress.org/plugins/advanced-custom-fields/";s:7:"package";s:72:"https://downloads.wordpress.org/plugin/advanced-custom-fields.4.4.11.zip";}s:19:"akismet/akismet.php";O:8:"stdClass":6:{s:2:"id";s:2:"15";s:4:"slug";s:7:"akismet";s:6:"plugin";s:19:"akismet/akismet.php";s:11:"new_version";s:3:"3.3";s:3:"url";s:38:"https://wordpress.org/plugins/akismet/";s:7:"package";s:54:"https://downloads.wordpress.org/plugin/akismet.3.3.zip";}s:36:"contact-form-7/wp-contact-form-7.php";O:8:"stdClass":6:{s:2:"id";s:3:"790";s:4:"slug";s:14:"contact-form-7";s:6:"plugin";s:36:"contact-form-7/wp-contact-form-7.php";s:11:"new_version";s:3:"4.7";s:3:"url";s:45:"https://wordpress.org/plugins/contact-form-7/";s:7:"package";s:61:"https://downloads.wordpress.org/plugin/contact-form-7.4.7.zip";}s:22:"cyr3lat/cyr-to-lat.php";O:8:"stdClass":6:{s:2:"id";s:5:"23472";s:4:"slug";s:7:"cyr3lat";s:6:"plugin";s:22:"cyr3lat/cyr-to-lat.php";s:11:"new_version";s:3:"3.5";s:3:"url";s:38:"https://wordpress.org/plugins/cyr3lat/";s:7:"package";s:54:"https://downloads.wordpress.org/plugin/cyr3lat.3.5.zip";}s:33:"duplicate-post/duplicate-post.php";O:8:"stdClass":7:{s:2:"id";s:4:"1295";s:4:"slug";s:14:"duplicate-post";s:6:"plugin";s:33:"duplicate-post/duplicate-post.php";s:11:"new_version";s:3:"3.2";s:3:"url";s:45:"https://wordpress.org/plugins/duplicate-post/";s:7:"package";s:61:"https://downloads.wordpress.org/plugin/duplicate-post.3.2.zip";s:14:"upgrade_notice";s:48:"new website + WPML compatibility + various fixes";}s:37:"user-role-editor/user-role-editor.php";O:8:"stdClass":6:{s:2:"id";s:5:"13697";s:4:"slug";s:16:"user-role-editor";s:6:"plugin";s:37:"user-role-editor/user-role-editor.php";s:11:"new_version";s:6:"4.32.3";s:3:"url";s:47:"https://wordpress.org/plugins/user-role-editor/";s:7:"package";s:66:"https://downloads.wordpress.org/plugin/user-role-editor.4.32.3.zip";}}}', 'no'),
+(261, 'visa_type_children', 'a:0:{}', 'yes');
 
 -- --------------------------------------------------------
 
@@ -311,7 +311,7 @@ CREATE TABLE IF NOT EXISTS `cs_postmeta` (
   `post_id` bigint(20) unsigned NOT NULL DEFAULT '0',
   `meta_key` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `meta_value` longtext COLLATE utf8mb4_unicode_ci
-) ENGINE=InnoDB AUTO_INCREMENT=468 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=598 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Дамп даних таблиці `cs_postmeta`
@@ -367,9 +367,9 @@ INSERT INTO `cs_postmeta` (`meta_id`, `post_id`, `meta_key`, `meta_value`) VALUE
 (54, 19, 'position', 'normal'),
 (55, 19, 'layout', 'no_box'),
 (56, 19, 'hide_on_screen', 'a:1:{i:0;s:11:"the_content";}'),
-(57, 19, '_edit_lock', '1492090679:1'),
+(57, 19, '_edit_lock', '1492546734:1'),
 (58, 20, '_edit_last', '1'),
-(59, 20, '_edit_lock', '1492092751:1'),
+(59, 20, '_edit_lock', '1492550080:1'),
 (60, 21, 'напрям', 'ТУРИЗМ'),
 (61, 21, '_напрям', 'field_58ef7cbb454cb'),
 (62, 21, 'вікова_категорія', ''),
@@ -398,7 +398,6 @@ INSERT INTO `cs_postmeta` (`meta_id`, `post_id`, `meta_key`, `meta_value`) VALUE
 (85, 20, '_необхідні_документи', 'field_58ef7e08454d0'),
 (86, 20, 'додаткова_оплата', '18 € послуги візового центру.'),
 (87, 20, '_додаткова_оплата', 'field_58ef7e33454d1'),
-(88, 19, 'rule', 'a:5:{s:5:"param";s:9:"post_type";s:8:"operator";s:2:"==";s:5:"value";s:5:"visas";s:8:"order_no";i:0;s:8:"group_no";i:0;}'),
 (89, 22, 'напрям', 'ТУРИЗМ'),
 (90, 22, '_напрям', 'field_58ef7cbb454cb'),
 (91, 22, 'вікова_категорія', ''),
@@ -720,7 +719,134 @@ INSERT INTO `cs_postmeta` (`meta_id`, `post_id`, `meta_key`, `meta_value`) VALUE
 (446, 69, '_messages', 'a:23:{s:12:"mail_sent_ok";s:96:"Дякуємо за Ваше повідомлення. Воно було відправлено.";s:12:"mail_sent_ng";s:179:"Сталася помилка під час спроби відправити Ваше повідомлення. Будь ласка спробуйте ще раз пізніше.";s:16:"validation_error";s:166:"Одне або декілька полів містять помилкові дані. Будь ласка перевірте їх і спробуйте ще раз.";s:4:"spam";s:179:"Сталася помилка під час спроби відправити Ваше повідомлення. Будь ласка спробуйте ще раз пізніше.";s:12:"accept_terms";s:153:"Ви повинні прийняти умови та положення перед тим, як відправляти Ваше повідомлення.";s:16:"invalid_required";s:31:"Поле обов''язкове.";s:16:"invalid_too_long";s:35:"Поле занадто довге.";s:17:"invalid_too_short";s:39:"Поле занадто коротке.";s:12:"invalid_date";s:45:"Формат дати некоректний.";s:14:"date_too_early";s:68:"Введена дата надто далеко в минулому.";s:13:"date_too_late";s:74:"Введена дата надто далеко в майбутньому.";s:13:"upload_failed";s:97:"Під час завантаження файлу сталася невідома помилка.";s:24:"upload_file_type_invalid";s:89:"Вам не дозволено завантажувати файли цього типу.";s:21:"upload_file_too_large";s:39:"Файл занадто великий.";s:23:"upload_failed_php_error";s:80:"Під час завантаження файлу сталася помилка.";s:14:"invalid_number";s:47:"Формат числа некоректний.";s:16:"number_too_small";s:66:"Число менше мінімально допустимого.";s:16:"number_too_large";s:70:"Число більше максимально допустимого.";s:23:"quiz_answer_not_correct";s:78:"Відповідь на питання вікторини є невірним.";s:17:"captcha_not_match";s:62:"Введено невірний контрольний код.";s:13:"invalid_email";s:85:"Адресу електронної пошти введено неправильно.";s:11:"invalid_url";s:57:"Посилання введено неправильно.";s:11:"invalid_tel";s:66:"Номер телефона введено неправильно.";}'),
 (447, 69, '_additional_settings', ''),
 (448, 69, '_locale', 'uk'),
-(467, 69, '_config_errors', 'a:1:{s:11:"mail.sender";a:1:{i:0;a:2:{s:4:"code";i:102;s:4:"args";a:3:{s:7:"message";s:0:"";s:6:"params";a:0:{}s:4:"link";s:68:"https://contactform7.com/configuration-errors/invalid-mailbox-syntax";}}}}');
+(467, 69, '_config_errors', 'a:1:{s:11:"mail.sender";a:1:{i:0;a:2:{s:4:"code";i:102;s:4:"args";a:3:{s:7:"message";s:0:"";s:6:"params";a:0:{}s:4:"link";s:68:"https://contactform7.com/configuration-errors/invalid-mailbox-syntax";}}}}'),
+(468, 70, '_edit_last', '1'),
+(469, 70, '_edit_lock', '1492543718:1'),
+(470, 70, '_wp_trash_meta_status', 'draft'),
+(471, 70, '_wp_trash_meta_time', '1492543745'),
+(472, 70, '_wp_desired_post_slug', ''),
+(473, 72, 'напрям', 'ТУРИЗМ'),
+(474, 72, '_напрям', 'field_58ef7cbb454cb'),
+(475, 72, 'вікова_категорія', 'діти до 18 років'),
+(476, 72, '_вікова_категорія', 'field_58ef7da1454cc'),
+(477, 72, 'тривалість', '10 днів'),
+(478, 72, '_тривалість', 'field_58ef7dbe454cd'),
+(479, 72, 'термін_виготовлення', '14 днів'),
+(480, 72, '_термін_виготовлення', 'field_58ef7ddd454ce'),
+(481, 72, 'ціна', '40 €'),
+(482, 72, '_ціна', 'field_58ef7df2454cf'),
+(483, 72, 'необхідні_документи', '- 1 фото;\r\n- закордонний - паспорт;\r\n- нотаріальний дозвіл від батьків;\r\n- свідоцтво про народження;\r\n- копії українських - паспортів батьків;\r\n- довідка з місця навчання.'),
+(484, 72, '_необхідні_документи', 'field_58ef7e08454d0'),
+(485, 72, 'додаткова_оплата', '18 € послуги візового центру.'),
+(486, 72, '_додаткова_оплата', 'field_58ef7e33454d1'),
+(487, 72, '_dp_original', '20'),
+(488, 72, '_edit_lock', '1492550021:1'),
+(489, 72, '_edit_last', '1'),
+(490, 73, 'напрям', 'ТУРИЗМ'),
+(491, 73, '_напрям', 'field_58ef7cbb454cb'),
+(492, 73, 'вікова_категорія', 'діти до 18 років'),
+(493, 73, '_вікова_категорія', 'field_58ef7da1454cc'),
+(494, 73, 'тривалість', '10 днів'),
+(495, 73, '_тривалість', 'field_58ef7dbe454cd'),
+(496, 73, 'термін_виготовлення', '14 днів'),
+(497, 73, '_термін_виготовлення', 'field_58ef7ddd454ce'),
+(498, 73, 'ціна', '40 €'),
+(499, 73, '_ціна', 'field_58ef7df2454cf'),
+(500, 73, 'необхідні_документи', '- 1 фото;\r\n- закордонний - паспорт;\r\n- нотаріальний дозвіл від батьків;\r\n- свідоцтво про народження;\r\n- копії українських - паспортів батьків;\r\n- довідка з місця навчання.'),
+(501, 73, '_необхідні_документи', 'field_58ef7e08454d0'),
+(502, 73, 'додаткова_оплата', '18 € послуги візового центру.'),
+(503, 73, '_додаткова_оплата', 'field_58ef7e33454d1'),
+(504, 74, 'напрям', 'БІЗНЕС ВІЗА'),
+(505, 74, '_напрям', 'field_58ef7cbb454cb'),
+(506, 74, 'вікова_категорія', ''),
+(507, 74, '_вікова_категорія', 'field_58ef7da1454cc'),
+(508, 74, 'тривалість', '10 днів'),
+(509, 74, '_тривалість', 'field_58ef7dbe454cd'),
+(510, 74, 'термін_виготовлення', '14 днів'),
+(511, 74, '_термін_виготовлення', 'field_58ef7ddd454ce'),
+(512, 74, 'ціна', '40 €'),
+(513, 74, '_ціна', 'field_58ef7df2454cf'),
+(514, 74, 'необхідні_документи', '- 1 фото;\r\n- закордонний - паспорт;\r\n- нотаріальний дозвіл від батьків;\r\n- свідоцтво про народження;\r\n- копії українських - паспортів батьків;\r\n- довідка з місця навчання.'),
+(515, 74, '_необхідні_документи', 'field_58ef7e08454d0'),
+(516, 74, 'додаткова_оплата', '18 € послуги візового центру.'),
+(517, 74, '_додаткова_оплата', 'field_58ef7e33454d1'),
+(519, 74, '_dp_original', '72'),
+(520, 75, 'напрям', 'ТУРИЗМ'),
+(521, 75, '_напрям', 'field_58ef7cbb454cb'),
+(522, 75, 'вікова_категорія', 'Діти до 18 років з батьками з візою С-04'),
+(523, 75, '_вікова_категорія', 'field_58ef7da1454cc'),
+(524, 75, 'тривалість', '10 днів'),
+(525, 75, '_тривалість', 'field_58ef7dbe454cd'),
+(526, 75, 'термін_виготовлення', '14 днів'),
+(527, 75, '_термін_виготовлення', 'field_58ef7ddd454ce'),
+(528, 75, 'ціна', '40 €'),
+(529, 75, '_ціна', 'field_58ef7df2454cf'),
+(530, 75, 'необхідні_документи', '- 1 фото;\r\n- закордонний - паспорт;\r\n- нотаріальний дозвіл від батьків;\r\n- свідоцтво про народження;\r\n- копії українських - паспортів батьків;\r\n- довідка з місця навчання.'),
+(531, 75, '_необхідні_документи', 'field_58ef7e08454d0'),
+(532, 75, 'додаткова_оплата', '18 € послуги візового центру.'),
+(533, 75, '_додаткова_оплата', 'field_58ef7e33454d1'),
+(535, 75, '_dp_original', '74'),
+(536, 74, '_edit_lock', '1492550030:1'),
+(537, 74, '_edit_last', '1'),
+(538, 76, 'напрям', 'БІЗНЕС ВІЗА'),
+(539, 76, '_напрям', 'field_58ef7cbb454cb'),
+(540, 76, 'вікова_категорія', ''),
+(541, 76, '_вікова_категорія', 'field_58ef7da1454cc'),
+(542, 76, 'тривалість', '10 днів'),
+(543, 76, '_тривалість', 'field_58ef7dbe454cd'),
+(544, 76, 'термін_виготовлення', '14 днів'),
+(545, 76, '_термін_виготовлення', 'field_58ef7ddd454ce'),
+(546, 76, 'ціна', '40 €'),
+(547, 76, '_ціна', 'field_58ef7df2454cf'),
+(548, 76, 'необхідні_документи', '- 1 фото;\r\n- закордонний - паспорт;\r\n- нотаріальний дозвіл від батьків;\r\n- свідоцтво про народження;\r\n- копії українських - паспортів батьків;\r\n- довідка з місця навчання.'),
+(549, 76, '_необхідні_документи', 'field_58ef7e08454d0'),
+(550, 76, 'додаткова_оплата', '18 € послуги візового центру.'),
+(551, 76, '_додаткова_оплата', 'field_58ef7e33454d1'),
+(552, 75, '_edit_lock', '1492550030:1'),
+(553, 75, '_edit_last', '1'),
+(554, 77, 'напрям', 'ТУРИЗМ'),
+(555, 77, '_напрям', 'field_58ef7cbb454cb'),
+(556, 77, 'вікова_категорія', 'Діти до 18 років з батьками з візою С-04'),
+(557, 77, '_вікова_категорія', 'field_58ef7da1454cc'),
+(558, 77, 'тривалість', '10 днів'),
+(559, 77, '_тривалість', 'field_58ef7dbe454cd'),
+(560, 77, 'термін_виготовлення', '14 днів'),
+(561, 77, '_термін_виготовлення', 'field_58ef7ddd454ce'),
+(562, 77, 'ціна', '40 €'),
+(563, 77, '_ціна', 'field_58ef7df2454cf'),
+(564, 77, 'необхідні_документи', '- 1 фото;\r\n- закордонний - паспорт;\r\n- нотаріальний дозвіл від батьків;\r\n- свідоцтво про народження;\r\n- копії українських - паспортів батьків;\r\n- довідка з місця навчання.'),
+(565, 77, '_необхідні_документи', 'field_58ef7e08454d0'),
+(566, 77, 'додаткова_оплата', '18 € послуги візового центру.'),
+(567, 77, '_додаткова_оплата', 'field_58ef7e33454d1'),
+(569, 78, 'напрям', 'ТУРИЗМ'),
+(570, 78, '_напрям', 'field_58ef7cbb454cb'),
+(571, 78, 'вікова_категорія', ''),
+(572, 78, '_вікова_категорія', 'field_58ef7da1454cc'),
+(573, 78, 'тривалість', '10 днів'),
+(574, 78, '_тривалість', 'field_58ef7dbe454cd'),
+(575, 78, 'термін_виготовлення', '14 днів'),
+(576, 78, '_термін_виготовлення', 'field_58ef7ddd454ce'),
+(577, 78, 'ціна', '40 €'),
+(578, 78, '_ціна', 'field_58ef7df2454cf'),
+(579, 78, 'необхідні_документи', '- 1 фото;\r\n\r\n- закордонний - паспорт;\r\n\r\n- нотаріальний дозвіл від батьків;\r\n\r\n- свідоцтво про народження;\r\n\r\n- копії українських - паспортів батьків;\r\n\r\n- довідка з місця навчання.'),
+(580, 78, '_необхідні_документи', 'field_58ef7e08454d0'),
+(581, 78, 'додаткова_оплата', '18 € послуги візового центру.'),
+(582, 78, '_додаткова_оплата', 'field_58ef7e33454d1'),
+(583, 19, 'rule', 'a:5:{s:5:"param";s:9:"post_type";s:8:"operator";s:2:"==";s:5:"value";s:5:"visas";s:8:"order_no";i:0;s:8:"group_no";i:0;}'),
+(584, 79, 'напрям', 'ТУРИЗМ'),
+(585, 79, '_напрям', 'field_58ef7cbb454cb'),
+(586, 79, 'вікова_категорія', ''),
+(587, 79, '_вікова_категорія', 'field_58ef7da1454cc'),
+(588, 79, 'тривалість', '10 днів'),
+(589, 79, '_тривалість', 'field_58ef7dbe454cd'),
+(590, 79, 'термін_виготовлення', '14 днів'),
+(591, 79, '_термін_виготовлення', 'field_58ef7ddd454ce'),
+(592, 79, 'ціна', '40 €'),
+(593, 79, '_ціна', 'field_58ef7df2454cf'),
+(594, 79, 'необхідні_документи', '- 1 фото;\r\n- закордонний - паспорт;\r\n- нотаріальний дозвіл від батьків;\r\n- свідоцтво про народження;\r\n- копії українських - паспортів батьків;\r\n- довідка з місця навчання.'),
+(595, 79, '_необхідні_документи', 'field_58ef7e08454d0'),
+(596, 79, 'додаткова_оплата', '18 € послуги візового центру.'),
+(597, 79, '_додаткова_оплата', 'field_58ef7e33454d1');
 
 -- --------------------------------------------------------
 
@@ -752,7 +878,7 @@ CREATE TABLE IF NOT EXISTS `cs_posts` (
   `post_type` varchar(20) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT 'post',
   `post_mime_type` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
   `comment_count` bigint(20) NOT NULL DEFAULT '0'
-) ENGINE=InnoDB AUTO_INCREMENT=70 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=80 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Дамп даних таблиці `cs_posts`
@@ -776,8 +902,8 @@ INSERT INTO `cs_posts` (`ID`, `post_author`, `post_date`, `post_date_gmt`, `post
 (16, 1, '2017-04-13 16:22:41', '2017-04-13 13:22:41', '', '1', '', 'inherit', 'open', 'closed', '', '1', '', '', '2017-04-13 16:22:41', '2017-04-13 13:22:41', '', 13, 'http://csrb/wp-content/uploads/2017/04/1.jpg', 0, 'attachment', 'image/jpeg', 0),
 (17, 1, '2017-04-13 16:23:14', '0000-00-00 00:00:00', '', 'Авточернетка', '', 'auto-draft', 'closed', 'closed', '', '', '', '', '2017-04-13 16:23:14', '0000-00-00 00:00:00', '', 0, 'http://csrb/?post_type=visas&p=17', 0, 'visas', '', 0),
 (18, 1, '2017-04-13 16:25:59', '0000-00-00 00:00:00', '', 'Авточернетка', '', 'auto-draft', 'closed', 'closed', '', '', '', '', '2017-04-13 16:25:59', '0000-00-00 00:00:00', '', 0, 'http://csrb/?post_type=visas&p=18', 0, 'visas', '', 0),
-(19, 1, '2017-04-13 16:34:29', '2017-04-13 13:34:29', '', 'Опис візи', '', 'publish', 'closed', 'closed', '', 'acf_opys-vizy', '', '', '2017-04-13 16:36:58', '2017-04-13 13:36:58', '', 0, 'http://csrb/?post_type=acf&#038;p=19', 0, 'acf', '', 0),
-(20, 1, '2017-04-13 16:36:50', '2017-04-13 13:36:50', '', 'C-01', '', 'publish', 'closed', 'closed', '', 'c-01', '', '', '2017-04-13 17:02:39', '2017-04-13 14:02:39', '', 0, 'http://csrb/?post_type=visas&#038;p=20', 0, 'visas', '', 0),
+(19, 1, '2017-04-13 16:34:29', '2017-04-13 13:34:29', '', 'Опис візи', '', 'publish', 'closed', 'closed', '', 'acf_opys-vizy', '', '', '2017-04-18 23:21:13', '2017-04-18 20:21:13', '', 0, 'http://csrb/?post_type=acf&#038;p=19', 0, 'acf', '', 0),
+(20, 1, '2017-04-18 23:36:50', '2017-04-18 20:36:50', '', 'C-01', '', 'publish', 'closed', 'closed', '', 'c-01', '', '', '2017-04-19 00:16:58', '2017-04-18 21:16:58', '', 0, 'http://csrb/?post_type=visas&#038;p=20', 0, 'visas', '', 0),
 (21, 1, '2017-04-13 16:36:50', '2017-04-13 13:36:50', '', 'C-01', '', 'inherit', 'closed', 'closed', '', '20-revision-v1', '', '', '2017-04-13 16:36:50', '2017-04-13 13:36:50', '', 20, 'http://csrb/2017/04/13/20-revision-v1/', 0, 'revision', '', 0),
 (22, 1, '2017-04-13 16:37:23', '2017-04-13 13:37:23', '', 'C-01', '', 'inherit', 'closed', 'closed', '', '20-revision-v1', '', '', '2017-04-13 16:37:23', '2017-04-13 13:37:23', '', 20, 'http://csrb/2017/04/13/20-revision-v1/', 0, 'revision', '', 0),
 (23, 1, '2017-04-13 16:46:20', '2017-04-13 13:46:20', '<div>\r\n<div>Тільки до кінця весни мультивіза за ціною одноразової!</div>\r\n<div>Ви платите лише 59 євро замість 120!</div>\r\n<div>Акція діє до 1 травня.</div>\r\n<div>Використайте свій шанс!</div>\r\n</div>', 'Весняна акція', '', 'publish', 'closed', 'closed', '', 'vesnyana-aktsiya', '', '', '2017-04-13 16:46:20', '2017-04-13 13:46:20', '', 0, 'http://csrb/?post_type=actions&#038;p=23', 0, 'actions', '', 0),
@@ -823,7 +949,17 @@ INSERT INTO `cs_posts` (`ID`, `post_author`, `post_date`, `post_date_gmt`, `post
 (65, 1, '2017-04-18 13:57:40', '2017-04-18 10:57:40', '', 'Юлія Фудашкіна', '', 'inherit', 'closed', 'closed', '', '63-revision-v1', '', '', '2017-04-18 13:57:40', '2017-04-18 10:57:40', '', 63, 'http://csrb/2017/04/18/63-revision-v1/', 0, 'revision', '', 0),
 (66, 1, '2017-04-18 14:09:54', '0000-00-00 00:00:00', '', 'Авточернетка', '', 'auto-draft', 'closed', 'closed', '', '', '', '', '2017-04-18 14:09:54', '0000-00-00 00:00:00', '', 0, 'http://csrb/?post_type=contact_infos&p=66', 0, 'contact_infos', '', 0),
 (67, 1, '2017-04-18 14:13:27', '2017-04-18 11:13:27', '<label> Your Name (required)\n    [text* your-name] </label>\n\n<label> Your Email (required)\n    [email* your-email] </label>\n\n<label> Subject\n    [text your-subject] </label>\n\n<label> Your Message\n    [textarea your-message] </label>\n\n[submit "Send"]\nЄВРОПЕЙСЬКИЙ ЦЕНТР БІЗНЕСУ "[your-subject]"\n[your-name] <wordpress@csrb>\nFrom: [your-name] <[your-email]>\nSubject: [your-subject]\n\nMessage Body:\n[your-message]\n\n-- \nThis e-mail was sent from a contact form on ЄВРОПЕЙСЬКИЙ ЦЕНТР БІЗНЕСУ (http://csrb)\nukrpol-lviv@ukr.net\nReply-To: [your-email]\n\n0\n0\n\nЄВРОПЕЙСЬКИЙ ЦЕНТР БІЗНЕСУ "[your-subject]"\nЄВРОПЕЙСЬКИЙ ЦЕНТР БІЗНЕСУ <wordpress@csrb>\nMessage Body:\n[your-message]\n\n-- \nThis e-mail was sent from a contact form on ЄВРОПЕЙСЬКИЙ ЦЕНТР БІЗНЕСУ (http://csrb)\n[your-email]\nReply-To: ukrpol-lviv@ukr.net\n\n0\n0\nThank you for your message. It has been sent.\nThere was an error trying to send your message. Please try again later.\nOne or more fields have an error. Please check and try again.\nThere was an error trying to send your message. Please try again later.\nYou must accept the terms and conditions before sending your message.\nThe field is required.\nThe field is too long.\nThe field is too short.', 'Contact form 1', '', 'publish', 'closed', 'closed', '', 'contact-form-1', '', '', '2017-04-18 14:13:27', '2017-04-18 11:13:27', '', 0, 'http://csrb/?post_type=wpcf7_contact_form&p=67', 0, 'wpcf7_contact_form', '', 0),
-(69, 1, '2017-04-18 14:51:31', '2017-04-18 11:51:31', '[text* user_name id:applicationName placeholder "Ваше і''мя"]\r\n[email user_email id:applicationEmail placeholder "Ваш E-mail"]\r\n[tel* user_number id:applicationTelephone placeholder "Ваш номер телефону"]\r\n[submit class:applicationButton "Безкоштовна консультація"]\n1\nЄВРОПЕЙСЬКИЙ ЦЕНТР БІЗНЕСУ "Замовлення дзвінка"\n[user_name] <wordpress@csrb>\nukrpol-lviv@ukr.net\nВід: [user_name] <[user_email]>\r\nТема: "Замовлення дзвінка" ЄВРОПЕЙСЬКИЙ ЦЕНТР БІЗНЕСУ\r\n\r\nТекст повідомлення:\r\nІм''я: [user_name]\r\nemail: [user_email]\r\nТел. [user_number]\r\n\r\n-- \r\nЄВРОПЕЙСЬКИЙ ЦЕНТР БІЗНЕСУ (http://csrb)\n\n\n\n\n\nЄВРОПЕЙСЬКИЙ ЦЕНТР БІЗНЕСУ "[your-subject]"\nЄВРОПЕЙСЬКИЙ ЦЕНТР БІЗНЕСУ <wordpress@csrb>\n[your-email]\nТекст повідомлення:\r\n[your-message]\r\n\r\n-- \r\nЦе повідомлення було відправлено з сайту ЄВРОПЕЙСЬКИЙ ЦЕНТР БІЗНЕСУ (http://csrb)\nReply-To: ukrpol-lviv@ukr.net\n\n\n\nДякуємо за Ваше повідомлення. Воно було відправлено.\nСталася помилка під час спроби відправити Ваше повідомлення. Будь ласка спробуйте ще раз пізніше.\nОдне або декілька полів містять помилкові дані. Будь ласка перевірте їх і спробуйте ще раз.\nСталася помилка під час спроби відправити Ваше повідомлення. Будь ласка спробуйте ще раз пізніше.\nВи повинні прийняти умови та положення перед тим, як відправляти Ваше повідомлення.\nПоле обов''язкове.\nПоле занадто довге.\nПоле занадто коротке.\nФормат дати некоректний.\nВведена дата надто далеко в минулому.\nВведена дата надто далеко в майбутньому.\nПід час завантаження файлу сталася невідома помилка.\nВам не дозволено завантажувати файли цього типу.\nФайл занадто великий.\nПід час завантаження файлу сталася помилка.\nФормат числа некоректний.\nЧисло менше мінімально допустимого.\nЧисло більше максимально допустимого.\nВідповідь на питання вікторини є невірним.\nВведено невірний контрольний код.\nАдресу електронної пошти введено неправильно.\nПосилання введено неправильно.\nНомер телефона введено неправильно.', 'Форма замовлення дзвінка', '', 'publish', 'closed', 'closed', '', 'forma-zamovlennya-dzvinka', '', '', '2017-04-18 15:29:28', '2017-04-18 12:29:28', '', 0, 'http://csrb/?post_type=wpcf7_contact_form&#038;p=69', 0, 'wpcf7_contact_form', '', 0);
+(69, 1, '2017-04-18 14:51:31', '2017-04-18 11:51:31', '[text* user_name id:applicationName placeholder "Ваше і''мя"]\r\n[email user_email id:applicationEmail placeholder "Ваш E-mail"]\r\n[tel* user_number id:applicationTelephone placeholder "Ваш номер телефону"]\r\n[submit class:applicationButton "Безкоштовна консультація"]\n1\nЄВРОПЕЙСЬКИЙ ЦЕНТР БІЗНЕСУ "Замовлення дзвінка"\n[user_name] <wordpress@csrb>\nukrpol-lviv@ukr.net\nВід: [user_name] <[user_email]>\r\nТема: "Замовлення дзвінка" ЄВРОПЕЙСЬКИЙ ЦЕНТР БІЗНЕСУ\r\n\r\nТекст повідомлення:\r\nІм''я: [user_name]\r\nemail: [user_email]\r\nТел. [user_number]\r\n\r\n-- \r\nЄВРОПЕЙСЬКИЙ ЦЕНТР БІЗНЕСУ (http://csrb)\n\n\n\n\n\nЄВРОПЕЙСЬКИЙ ЦЕНТР БІЗНЕСУ "[your-subject]"\nЄВРОПЕЙСЬКИЙ ЦЕНТР БІЗНЕСУ <wordpress@csrb>\n[your-email]\nТекст повідомлення:\r\n[your-message]\r\n\r\n-- \r\nЦе повідомлення було відправлено з сайту ЄВРОПЕЙСЬКИЙ ЦЕНТР БІЗНЕСУ (http://csrb)\nReply-To: ukrpol-lviv@ukr.net\n\n\n\nДякуємо за Ваше повідомлення. Воно було відправлено.\nСталася помилка під час спроби відправити Ваше повідомлення. Будь ласка спробуйте ще раз пізніше.\nОдне або декілька полів містять помилкові дані. Будь ласка перевірте їх і спробуйте ще раз.\nСталася помилка під час спроби відправити Ваше повідомлення. Будь ласка спробуйте ще раз пізніше.\nВи повинні прийняти умови та положення перед тим, як відправляти Ваше повідомлення.\nПоле обов''язкове.\nПоле занадто довге.\nПоле занадто коротке.\nФормат дати некоректний.\nВведена дата надто далеко в минулому.\nВведена дата надто далеко в майбутньому.\nПід час завантаження файлу сталася невідома помилка.\nВам не дозволено завантажувати файли цього типу.\nФайл занадто великий.\nПід час завантаження файлу сталася помилка.\nФормат числа некоректний.\nЧисло менше мінімально допустимого.\nЧисло більше максимально допустимого.\nВідповідь на питання вікторини є невірним.\nВведено невірний контрольний код.\nАдресу електронної пошти введено неправильно.\nПосилання введено неправильно.\nНомер телефона введено неправильно.', 'Форма замовлення дзвінка', '', 'publish', 'closed', 'closed', '', 'forma-zamovlennya-dzvinka', '', '', '2017-04-18 15:29:28', '2017-04-18 12:29:28', '', 0, 'http://csrb/?post_type=wpcf7_contact_form&#038;p=69', 0, 'wpcf7_contact_form', '', 0),
+(70, 1, '2017-04-18 22:28:38', '2017-04-18 19:28:38', '', 'C-01', '', 'trash', 'closed', 'closed', '', '__trashed', '', '', '2017-04-18 22:29:05', '2017-04-18 19:29:05', '', 0, 'http://csrb/?post_type=visas&#038;p=70', 0, 'visas', '', 0),
+(71, 1, '2017-04-18 22:29:05', '2017-04-18 19:29:05', '', 'C-01', '', 'inherit', 'closed', 'closed', '', '70-revision-v1', '', '', '2017-04-18 22:29:05', '2017-04-18 19:29:05', '', 70, 'http://csrb/2017/04/18/70-revision-v1/', 0, 'revision', '', 0),
+(72, 1, '2017-04-18 19:25:43', '2017-04-18 16:25:43', '', 'C-01', '', 'publish', 'closed', 'closed', '', 'c-01-2', '', '', '2017-04-18 23:43:58', '2017-04-18 20:43:58', '', 0, 'http://csrb/?post_type=visas&#038;p=72', 0, 'visas', '', 0),
+(73, 1, '2017-04-18 22:29:43', '2017-04-18 19:29:43', '', 'C-01', '', 'inherit', 'closed', 'closed', '', '72-revision-v1', '', '', '2017-04-18 22:29:43', '2017-04-18 19:29:43', '', 72, 'http://csrb/2017/04/18/72-revision-v1/', 0, 'revision', '', 0),
+(74, 1, '2017-04-18 17:30:19', '2017-04-18 14:30:19', '', 'C-01', '', 'publish', 'closed', 'closed', '', 'c-01-3', '', '', '2017-04-19 00:15:39', '2017-04-18 21:15:39', '', 0, 'http://csrb/?post_type=visas&#038;p=74', 0, 'visas', '', 0),
+(75, 1, '2017-04-18 16:32:39', '2017-04-18 13:32:39', '', 'C-01', '', 'publish', 'closed', 'closed', '', 'c-01-4', '', '', '2017-04-18 23:43:44', '2017-04-18 20:43:44', '', 0, 'http://csrb/?post_type=visas&#038;p=75', 0, 'visas', '', 0),
+(76, 1, '2017-04-18 22:32:19', '2017-04-18 19:32:19', '', 'C-01', '', 'inherit', 'closed', 'closed', '', '74-revision-v1', '', '', '2017-04-18 22:32:19', '2017-04-18 19:32:19', '', 74, 'http://csrb/2017/04/18/74-revision-v1/', 0, 'revision', '', 0),
+(77, 1, '2017-04-18 22:32:39', '2017-04-18 19:32:39', '', 'C-01', '', 'inherit', 'closed', 'closed', '', '75-revision-v1', '', '', '2017-04-18 22:32:39', '2017-04-18 19:32:39', '', 75, 'http://csrb/2017/04/18/75-revision-v1/', 0, 'revision', '', 0),
+(78, 1, '2017-04-18 23:18:57', '2017-04-18 20:18:57', '', 'C-01', '', 'inherit', 'closed', 'closed', '', '20-revision-v1', '', '', '2017-04-18 23:18:57', '2017-04-18 20:18:57', '', 20, 'http://csrb/2017/04/18/20-revision-v1/', 0, 'revision', '', 0),
+(79, 1, '2017-04-18 23:21:35', '2017-04-18 20:21:35', '', 'C-01', '', 'inherit', 'closed', 'closed', '', '20-revision-v1', '', '', '2017-04-18 23:21:35', '2017-04-18 20:21:35', '', 20, 'http://csrb/2017/04/18/20-revision-v1/', 0, 'revision', '', 0);
 
 -- --------------------------------------------------------
 
@@ -881,7 +1017,16 @@ INSERT INTO `cs_term_relationships` (`object_id`, `term_taxonomy_id`, `term_orde
 (1, 1, 0),
 (20, 2, 0),
 (20, 3, 0),
-(20, 4, 0);
+(20, 4, 0),
+(72, 2, 0),
+(72, 3, 0),
+(72, 4, 0),
+(74, 2, 0),
+(74, 3, 0),
+(74, 4, 0),
+(75, 2, 0),
+(75, 3, 0),
+(75, 4, 0);
 
 -- --------------------------------------------------------
 
@@ -904,9 +1049,9 @@ CREATE TABLE IF NOT EXISTS `cs_term_taxonomy` (
 
 INSERT INTO `cs_term_taxonomy` (`term_taxonomy_id`, `term_id`, `taxonomy`, `description`, `parent`, `count`) VALUES
 (1, 1, 'category', '', 0, 1),
-(2, 2, 'visa_type', '', 0, 1),
-(3, 3, 'visa_type', '', 0, 1),
-(4, 4, 'visa_type', '', 0, 1);
+(2, 2, 'visa_type', 'Ця віза знадобиться вам, якщо ви мандруєте або навідуєте друзів', 0, 4),
+(3, 3, 'visa_type', 'Мультивіза підійде вам, якщо ви маєте часто бувати в Європі', 0, 4),
+(4, 4, 'visa_type', 'Національна віза підійде вам, якщо ви хочете працювати в Європі', 0, 4);
 
 -- --------------------------------------------------------
 
@@ -940,7 +1085,7 @@ INSERT INTO `cs_usermeta` (`umeta_id`, `user_id`, `meta_key`, `meta_value`) VALU
 (12, 1, 'cs_user_level', '10'),
 (13, 1, 'dismissed_wp_pointers', ''),
 (14, 1, 'show_welcome_panel', '0'),
-(15, 1, 'session_tokens', 'a:2:{s:64:"939b87afe3eece3b579319d9b9c73758bdc3cb325002f2b14103196fcadcfc8f";a:4:{s:10:"expiration";i:1493230874;s:2:"ip";s:9:"127.0.0.1";s:2:"ua";s:115:"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2987.133 Safari/537.36";s:5:"login";i:1492021274;}s:64:"afad949b491ec2d10f7e7ea151f111682067ae3c283a337b8c2483d8431c7bfd";a:4:{s:10:"expiration";i:1492680628;s:2:"ip";s:9:"127.0.0.1";s:2:"ua";s:115:"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2987.133 Safari/537.36";s:5:"login";i:1492507828;}}'),
+(15, 1, 'session_tokens', 'a:3:{s:64:"939b87afe3eece3b579319d9b9c73758bdc3cb325002f2b14103196fcadcfc8f";a:4:{s:10:"expiration";i:1493230874;s:2:"ip";s:9:"127.0.0.1";s:2:"ua";s:115:"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2987.133 Safari/537.36";s:5:"login";i:1492021274;}s:64:"afad949b491ec2d10f7e7ea151f111682067ae3c283a337b8c2483d8431c7bfd";a:4:{s:10:"expiration";i:1492680628;s:2:"ip";s:9:"127.0.0.1";s:2:"ua";s:115:"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2987.133 Safari/537.36";s:5:"login";i:1492507828;}s:64:"423b74c463aeb86d325297c619194e2aa0580c6d1b8b9fb38875b72cf4c52481";a:4:{s:10:"expiration";i:1492716453;s:2:"ip";s:9:"127.0.0.1";s:2:"ua";s:115:"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2987.133 Safari/537.36";s:5:"login";i:1492543653;}}'),
 (16, 1, 'cs_dashboard_quick_press_last_post_id', '3'),
 (17, 1, 'closedpostboxes_dashboard', 'a:2:{i:0;s:19:"dashboard_right_now";i:1;s:21:"dashboard_quick_press";}'),
 (18, 1, 'metaboxhidden_dashboard', 'a:0:{}'),
@@ -1100,17 +1245,17 @@ ALTER TABLE `cs_links`
 -- AUTO_INCREMENT для таблиці `cs_options`
 --
 ALTER TABLE `cs_options`
-  MODIFY `option_id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=252;
+  MODIFY `option_id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=262;
 --
 -- AUTO_INCREMENT для таблиці `cs_postmeta`
 --
 ALTER TABLE `cs_postmeta`
-  MODIFY `meta_id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=468;
+  MODIFY `meta_id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=598;
 --
 -- AUTO_INCREMENT для таблиці `cs_posts`
 --
 ALTER TABLE `cs_posts`
-  MODIFY `ID` bigint(20) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=70;
+  MODIFY `ID` bigint(20) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=80;
 --
 -- AUTO_INCREMENT для таблиці `cs_termmeta`
 --
