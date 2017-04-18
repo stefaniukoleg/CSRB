@@ -74,13 +74,14 @@
                 </div>
                 <div class="row container center">
                     <div class="col offset-l2 l8 offset-l2"> 
-                        <form action="application.php" method="POST" id="application" class="fadeInRight wow" style="margin-top: 0" data-wow-delay="0.9s" name="application">
-                            <div class=" footer-form center">Залиште Ваші дані і ми зв'яжемося з Вами та дамо відповідь на любе питання</div>
-                            <input name="name" id="applicationName" maxlength="20" placeholder="Ваше і'мя" required/>
-                            <input name="email" type="email" id="applicationEmail" maxlength="20" placeholder="Ваш E-mail" required/>
-                            <input name="number" type="tel" id="applicationTelephone"  placeholder="Ваш номер телефону" required/>
-                            <button class="applicationButton black-text" type="submit" form="application">Безкоштовна консультація</button>
-                        </form>
+                        <div id="application" class="fadeInRight wow" style="margin-top: 0" data-wow-delay="0.9s">
+                            <div class=" footer-form center">
+                                Залиште Ваші дані і ми зв'яжемося з Вами та дамо відповідь на любе питання
+                            </div>
+                            <?php
+                                echo do_shortcode('[contact-form-7 id="69" title="Форма замовлення дзвінка"]');
+                            ?>
+                        </div>
                     </div>
                 </div>
             </div>

@@ -1,13 +1,14 @@
 <div id="modal1" class="modal anketa-bg">
     <div class="mask">
         <div class="modal-content center">
-            <form data-wow-delay="0.9s" id="application-anketa" action=" application.php" method="POST" name="application">
-                <div class="form-label-anketa center">Залиште Ваші дані і ми зв'яжемося з Вами та дамо відповідь на любе питання</div>
-                <input name="name" id="applicationName" maxlength="20" placeholder="Ваше і'мя"required/>
-                <input name="email" type="email" id="applicationEmail" maxlength="20" placeholder="Вваш E-mail" required/>
-                <input name="number" type="tel" id="applicationTelephone" placeholder="Ваш номер телефону" required/>
-                <button class="applicationButton" type="submit" form="application">Безкоштовна консультація</button>
-            </form>
+            <div class="form-label-anketa center">Залиште Ваші дані і ми зв'яжемося з Вами та дамо відповідь на любе питання</div>
+            <?php
+                echo do_shortcode('[contact-form-7 id="69" title="Форма замовлення дзвінка"]');
+            ?>
+            <!--
+                <form data-wow-delay="0.9s" id="application-anketa" action="application.php" method="POST" name="application">
+                </form>
+            -->
         </div>
     </div>
 </div>
@@ -26,14 +27,15 @@
                             <div>професійно індивідуально надійно</div>
                         </div>
                     </div>
-                    <div class="col l6 s12 m12 center"> 
-                        <form class="fadeInRight wow" data-wow-delay="0.9s" id="application" action=" application.php" method="POST" name=" application ">
-                            <div class="form-label right">Залиште Ваші дані і ми зв'яжемося з Вами та дамо відповідь на любе питання</div>
-                            <input name="name" id="applicationName" maxlength="20" placeholder="Ваше і'мя" required />
-                            <input name="email" type="email" id="applicationEmail" maxlength="20" placeholder="Вваш E-mail" required />
-                            <input name="number" type="tel" id="applicationTelephone"  placeholder="Ваш номер телефону" required/>
-                            <button class="applicationButton" type="submit" form="application">Безкоштовна консультація </button>
-                        </form>
+                    <div class="col l6 s12 m12 center">
+                        <div id="application" class="fadeInRight wow" data-wow-delay="0.9s">
+                            <div class="form-label right">
+                                Залиште Ваші дані і ми зв'яжемося з Вами та дамо відповідь на любе питання
+                            </div>
+                            <?php
+                                echo do_shortcode('[contact-form-7 id="69" title="Форма замовлення дзвінка"]');
+                            ?>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -77,7 +79,7 @@
                                 </div>
                             </div>
                         </a>
-                        <a href="#" data-wow-delay="0.5s"  class="waves-effect wow tada black-text waves-light btn btn-offer">безкоштовна консультація</a>
+                        <a href="#" data-wow-delay="0.5s" class="waves-effect wow tada black-text waves-light btn btn-offer">безкоштовна консультація</a>
                     </div>
                     <div class="col l4 s12 m12"> 
                         <a href="<?php echo get_term_link('national-visa', 'visa_type'); ?>">
@@ -90,7 +92,7 @@
                                 </div>
                             </div>
                         </a>
-                        <a href="#" data-wow-delay="0.5s"  class="waves-effect wow tada black-text waves-light btn btn-offer">безкоштовна консультація</a>
+                        <a href="#" data-wow-delay="0.5s" class="waves-effect wow tada black-text waves-light btn btn-offer">безкоштовна консультація</a>
                     </div>
                 </div>
             </div>
@@ -98,8 +100,9 @@
     </div>
 </div>
 
-<!-- countries block -->
+
 <?php
+    // countries block
     $args = array(
         'post_type' => array('countries'),
         'posts_per_page' => 6,
@@ -109,7 +112,7 @@
     );
     $post_count = 0;
     $query = new WP_Query( $args );
-    if( $query->have_posts() ) {
+    if ( $query->have_posts() ) {
         echo '
         <div id="three" class="container">
             <div class="line-main wow flipInY" data-wow-delay="0.2s" style="padding: 0;margin-bottom: 50px;padding-top: 20px">
@@ -144,109 +147,138 @@
             </div>
         </div>';
     } //end if
+
+
+
+    // immigrations block
+    $args = array(
+        'post_type' => array('immigrations'),
+        'posts_per_page' => 2,
+        'publish' => true,
+        'orderby' => 'date',
+        'order' => 'DESC'
+    );
+    $post_count = 0;
+    $query = new WP_Query( $args );
+    if( $query->have_posts() ) {
+        echo '
+        <div id="four" class="imigration-block">
+            <div class="parallax-container container-mob-third">
+                <div class="parallax">
+                    <img src="' . get_template_directory_uri() . '/img/bg/3.jpg" alt="parallax">
+                    <div class="mask">
+                        <div class="line-main container">
+                            <div class="line-sign center white-text">ІМІГРАЦІЯ</div>
+                            <div class="block-line white"></div>
+                            <div class="line-sign-third center white-text">Життя в Європі - запорука майбутнього</div>
+                        </div>
+                        <div class="row container center">';
+                            while ( $query->have_posts() ) {
+                                $query->the_post();
+                                echo '
+                                <div class="col l6 s12 m6"> 
+                                    <div class="imigration-offer ">
+                                        <a href="' . get_the_permalink() . '">
+                                            <div class="imigration-type">' . get_the_title() . '</div>
+                                            <div class="imigration-desc">' . 
+                                                get_post_meta( $post->ID, 'короткий_опис', true ) . '
+                                            </div>
+                                        </a>
+                                        <a href="###" class="waves-effect black-text waves-light btn btn-imig">
+                                            безкоштовна консультація
+                                        </a>
+                                    </div>
+                                </div>';
+                            } //end while
+                            echo '
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>';
+    } //end if
+
+
+
+    // actions block
+    $args = array(
+        'post_type' => array('actions'),
+        'posts_per_page' => 1,
+        'publish' => true,
+        'orderby' => 'date',
+        'order' => 'DESC'
+    );
+    $post_count = 0;
+    $query = new WP_Query( $args );
+    if ( $query->have_posts() ) {
+        echo '
+        <div id="five" class="promotion-block">
+            <div class="parallax-container promotion-block-height">
+                <div class="parallax"><img src="' . get_template_directory_uri() . '/img/bg/4.jpg" alt="parallax">
+                    <div class="mask-third">
+                        <div class="row container center">';
+                            while ( $query->have_posts() ) {
+                                $query->the_post();
+                                echo '
+                                <div class="col l12 s12"> 
+                                    <div class="promotion-offer">
+                                        <div class="promotion-type">' . get_the_title() . '</div>
+                                        <div class="block-line line-promotion"></div>
+                                        <div class="promotion-desc">';
+                                            the_content();
+                                            echo '
+                                        </div>
+                                    </div>
+                                </div>';
+                            } //end while
+                            echo '
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>';
+    } //end if
+
+
+
+    // team block
+    $args = array(
+        'post_type' => array('team'),
+        'posts_per_page' => 3,
+        'publish' => true,
+        'orderby' => 'date',
+        'order' => 'DESC'
+    );
+    $post_count = 0;
+    $query = new WP_Query( $args );
+    if ( $query->have_posts() ) {
+        echo '
+        <div id="six" class="team-block">
+            <div class="line-main container team-block-pad">
+                <div class="line-sign center">НАША КОМАНДА</div>
+                <div class="block-line"></div>
+                <div class="line-sign-third center">Думайте про подорож - ми подбаємо про все інше</div>
+            </div>
+            <div class="row container center members">';
+                while ( $query->have_posts() ) {
+                    $query->the_post();
+                    //get_the_post_thumbnail_url()
+                    echo '
+                    <div class="col l4 m6 s12">
+                        <div class="member-team-one center"></div>
+                        <div class="member-name ">' .
+                            get_the_title() . '
+                        </div>
+                        <div class="member-position">' .
+                            get_post_meta( $post->ID, 'посада', true ) . '
+                        </div>
+                    </div>';
+                } //end while
+                echo '
+            </div>
+        </div>';
+    } //end if
 ?>
-
-<!--  imigration block -->
-<div id="four" class="imigration-block">
-    <div class="parallax-container container-mob-third">
-        <div class="parallax"><img src="<?php echo get_template_directory_uri(); ?>/img/bg/3.jpg" alt="parallax">
-            <div class="mask">
-                <div class="line-main container">
-                    <div class="line-sign center white-text">ІМІГРАЦІЯ</div>
-                    <div class="block-line white"></div>
-                    <div class="line-sign-third center white-text">Життя в Європі - запорука майбутнього</div>
-                </div>
-                <div class="row container center">
-                    <div class="col l6 s12 m6"> 
-                        <div class="imigration-offer ">
-                            <a href="<?php echo get_the_permalink(13); ?>">
-                                <div class="imigration-type">Реєстрація бізнесу</div>
-                                <div class="imigration-desc">Під ключ</div>
-                            </a>
-                            <a href="###" class="waves-effect black-text waves-light btn btn-imig">безкоштовна консультація</a>
-                        </div>
-                    </div>
-                    <div class="col l6 s12 m6"> 
-                        <div class="imigration-offer ">
-                            <a href="living.html">
-                                <div class="imigration-type ">Вид на проживання</div>
-                                <div class="imigration-desc">Надійно і швидко</div>
-                            </a>
-                            <a href="###" class="waves-effect black-text waves-light btn btn-imig">безкоштовна консультація</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-<!--  promotion block -->
-<div id="five" class="promotion-block">
-    <div class="parallax-container promotion-block-height">
-        <div class="parallax"><img src="<?php echo get_template_directory_uri(); ?>/img/bg/4.jpg" alt="parallax">
-            <div class="mask-third">
-                <div class="row container center">
-                    <div class="col l12 s12"> 
-                        <div class="promotion-offer">
-                            <a href="#">
-                                <div class="promotion-type">весняна акція</div>
-                                <div class="block-line line-promotion"></div>
-                                <div class="promotion-desc ">
-                                    Тільки до кінця весни мультивіза за ціною одноразової!<br>
-                                    Ви платите лише 59 євро замість
-                                    <span style="text-decoration: line-through">120</span>!<br>
-                                    Акція діє до 1 травня.<br>Використайте свій шанс!
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-<!--  team block -->
-<div id="six" class="team-block">
-    <div class="line-main container team-block-pad">
-        <div class="line-sign center ">НАША КОМАНДА</div>
-        <div class="block-line "></div>
-        <div class="line-sign-third center">Думайте про подорож - ми подбаємо про все інше</div>
-    </div>
-    <div class="row container center members">
-        <div class="col l4 m6 s12">
-            <div class="member-team-one center">
-            </div>
-            <div class="member-name ">
-                Оксана Лесів
-            </div>
-            <div class="member-position">
-                Мененджер з роботи з<br> клієнтами
-            </div>
-        </div>
-        <div class="col l4 m6 s12">
-            <div class="member-team-two center">
-            </div>
-            <div class="member-name center">
-                Олексій Здравовєдов
-            </div>
-            <div class="member-position">
-                Директор
-            </div>
-        </div>
-        <div class="col l4 m12 s12">
-            <div class="member-team-three center">
-            </div>
-            <div class="member-name center">
-                Юлія Фудашкіна
-            </div>
-            <div class="member-position">
-                Директор з розвитку
-            </div>
-        </div>
-    </div>
-</div>
 
 <!--  advantages block -->
 <div id="seven">

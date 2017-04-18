@@ -265,7 +265,7 @@
     add_action( 'init', 'register_cpt_actions' );
 
     
-
+/*
     function register_cpt_contact_info() {
         $labels = array( 
             'name' => _x( 'Контактна інформація', 'contact_info' ),
@@ -316,6 +316,7 @@
         register_post_type( 'contact_infos', $args );
     }
     add_action( 'init', 'register_cpt_contact_info' );
+*/
 
 // end register custom posts types
 
