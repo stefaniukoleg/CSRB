@@ -23,6 +23,10 @@ body, nav {
     float: right;
     width: 50px;
 }
+form p {
+    margin-bottom: 10px;
+    text-align: center;
+}
 
 .lang-block {
     position: absolute;
@@ -45,7 +49,13 @@ body, nav {
     top: 15px;
     position: relative;
 }
-
+.social-block a {
+    padding: 0;
+display: inline-block;
+}
+.social-block a:hover {
+background-color: transparent;
+    }
 .social-img {
     width: 40px;
     margin-right: 5px;
@@ -143,6 +153,7 @@ padding-bottom: 40px;
 }
 
 .container {
+    max-width: 1980px;
     width: 90%;
 }
 
@@ -720,4 +731,9 @@ input:not([type]):focus:not([readonly]) {
 .anketa-bg{
     background-image: url(img/bg/2.jpg);
     background-position: center;
+}
+.mapboxgl-ctrl-bottom-left .mapboxgl-ctrl {
+    margin: 0 0 10px 10px;
+    float: left;
+    display: none;
 }

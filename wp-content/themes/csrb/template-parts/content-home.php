@@ -1,7 +1,7 @@
 <div id="modal1" class="modal anketa-bg">
     <div class="mask">
         <div class="modal-content center">
-            <div class="form-label-anketa center">Залиште Ваші дані і ми зв'яжемося з Вами та дамо відповідь на любе питання</div>
+            <div class="form-label-anketa center">Залиште Ваші дані і ми зв'яжемося з Вами та дамо відповідь на будь-яке запитання</div>
             <?php
                 echo do_shortcode('[contact-form-7 id="69" title="Форма замовлення дзвінка"]');
             ?>
@@ -30,7 +30,7 @@
                     <div class="col l6 s12 m12 center">
                         <div id="application" class="fadeInRight wow" data-wow-delay="0.9s">
                             <div class="form-label right">
-                                Залиште Ваші дані і ми зв'яжемося з Вами та дамо відповідь на любе питання
+                                Залиште Ваші дані і ми зв'яжемося з Вами та дамо відповідь на будь-яке запитання
                             </div>
                             <?php
                                 echo do_shortcode('[contact-form-7 id="69" title="Форма замовлення дзвінка"]');
@@ -265,7 +265,7 @@
                     //get_the_post_thumbnail_url()
                     echo '
                     <div class="col l4 m6 s12">
-                        <div class="member-team-one center"></div>
+                        <div style="background-image: url(' . get_the_post_thumbnail_url() . ');" class="member-team-one center"></div>
                         <div class="member-name ">' .
                             get_the_title() . '
                         </div>

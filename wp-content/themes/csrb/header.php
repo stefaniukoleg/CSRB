@@ -21,7 +21,7 @@
         @media screen and (min-width: 768px) and (max-width: 1024px) {
             .container-mob {
                 height: 680px;
-            }
+            } 
             .container-mob-sec{
                 height: 1050px;
             }
@@ -46,6 +46,8 @@
             }
         }
     </style>
+    <script src='https://api.mapbox.com/mapbox-gl-js/v0.35.1/mapbox-gl.js'></script>
+<link href='https://api.mapbox.com/mapbox-gl-js/v0.35.1/mapbox-gl.css' rel='stylesheet' />
 </head>
 
 <body>
@@ -60,8 +62,8 @@
                 </div>
             </a>
             <div class="lang-block">
-                <img class="lang-img" src="<?php echo get_template_directory_uri(); ?>/img/languages/rus.svg" alt="logo">
-                <img class="lang-img" src="<?php echo get_template_directory_uri(); ?>/img/languages/ukr.svg" alt="logo">
+                <a href="<?php echo get_home_url(); ?>"><img class="lang-img" src="<?php echo get_template_directory_uri(); ?>/img/languages/rus.svg" alt="logo"></a>
+               <a href="<?php echo get_home_url(); ?>"> <img class="lang-img" src="<?php echo get_template_directory_uri(); ?>/img/languages/ukr.svg" alt="logo"></a>
             </div>
             <ul id="top-menu" class="left menu-block hide-on-med-and-down">
                 <li><a href="<?php echo get_home_url(); ?>/#two">Візи</a></li>
@@ -76,17 +78,17 @@
                 </li>
                 <li>
                     <div class="hide-on-small-only social-block">
-                        <img class="social-img" src="<?php echo get_template_directory_uri(); ?>/img/social/vk.svg" alt="logo">
-                        <img class="social-img" src="<?php echo get_template_directory_uri(); ?>/img/social/facebook.svg" alt="logo">
+                         <a href="<?php echo get_home_url(); ?>"><img class="social-img" src="<?php echo get_template_directory_uri(); ?>/img/social/vk.svg" alt="logo"></a>
+                         <a href="<?php echo get_home_url(); ?>"><img class="social-img" src="<?php echo get_template_directory_uri(); ?>/img/social/facebook.svg" alt="logo"></a>
                     </div>
                 </li>
             </ul>
             <ul class="side-nav" id="mobile-demo">
-                <li><a href="#two">Візи</a></li>
-                <li><a href="#three">Країни</a></li>
-                <li><a href="#four">Іміграція</a></li>
-                <li><a href="#six">Команда</a></li>
-                <li><a href="#eight">Контакти</a></li>
+                <li><a href="<?php echo get_home_url(); ?>/#two">Візи</a></li>
+                <li><a href="<?php echo get_home_url(); ?>/#three">Країни</a></li>
+                <li><a href="<?php echo get_home_url(); ?>/#four">Іміграція</a></li>
+                <li><a href="<?php echo get_home_url(); ?>/#six">Команда</a></li>
+                <li><a href="<?php echo get_home_url(); ?>/#eight">Контакти</a></li>
             </ul>
         </div>
     </nav>
