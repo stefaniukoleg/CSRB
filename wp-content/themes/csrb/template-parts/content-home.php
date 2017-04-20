@@ -1,14 +1,11 @@
 <div id="modal1" class="modal anketa-bg">
     <div class="mask">
         <div class="modal-content center">
-            <div class="form-label-anketa center">Залиште Ваші дані і ми зв'яжемося з Вами та дамо відповідь на будь-яке запитання</div>
+            <div class="form-label-anketa center">
+            <?php pll_e('Фраза 1'); ?> </div>
             <?php
-                echo do_shortcode('[contact-form-7 id="69" title="Форма замовлення дзвінка"]');
+                echo do_shortcode('[cf7-form cf7key="forma-zamovlennya-dzvinka"]');
             ?>
-            <!--
-                <form data-wow-delay="0.9s" id="application-anketa" action="application.php" method="POST" name="application">
-                </form>
-            -->
         </div>
     </div>
 </div>
@@ -22,18 +19,16 @@
                 <div class="row container">
                     <div class="col l6 s12 m12"> 
                         <div class="main-sign fadeInLeft wow" data-wow-delay="0.2s" >
-                            <div>віза шенген</div>
-                            <div>європейський центр бізнесу</div>
-                            <div>професійно індивідуально надійно</div>
+                            <?php pll_e('Фраза 2'); ?>
                         </div>
                     </div>
                     <div class="col l6 s12 m12 center">
                         <div id="application" class="fadeInRight wow" data-wow-delay="0.9s">
                             <div class="form-label right">
-                                Залиште Ваші дані і ми зв'яжемося з Вами та дамо відповідь на будь-яке запитання
+                                <?php pll_e('Фраза 1'); ?>
                             </div>
                             <?php
-                                echo do_shortcode('[contact-form-7 id="69" title="Форма замовлення дзвінка"]');
+                                echo do_shortcode('[cf7-form cf7key="forma-zamovlennya-dzvinka"]');
                             ?>
                         </div>
                     </div>
@@ -45,63 +40,53 @@
 <!--end main-block -->
 
 <!--offer block --> 
-<div id="two" class="offer-block ">
-    <div class="parallax-container container-mob-sec">
-        <div class="parallax">
-            <img src="<?php echo get_template_directory_uri(); ?>/img/bg/2.jpg" alt="parallax">
-            <div class="mask-second">
-                <div class="line-main container">
-                    <div class="line-sign">ВІЗИ</div>
-                    <div class="block-line"></div>
-                </div>
-                <div class="row container offer-block-pad">
-                    <div class="col l4 s12 m6"> 
-                        <a href="<?php echo get_term_link('short-visa', 'visa_type'); ?>">
-                            <div class="single-offer center fadeInLeft wow" data-wow-delay="0.5s" >
-                                <div class="offer-sign">
-                                    коротка віза
-                                </div>
-                                <div class="offer-desc">
-                                    10-20 днів
-                                </div>
+
+<?php
+    // visa block
+    $terms = get_terms( 'visa_type');
+
+    if ( !empty($terms) ) {
+        echo '
+        <div id="two" class="offer-block ">
+            <div class="parallax-container container-mob-sec">
+                <div class="parallax">
+                    <img src="' . get_template_directory_uri() . '/img/bg/2.jpg" alt="parallax">
+                    <div class="mask-second">
+                        <div class="line-main container">
+                            <div class="line-sign">' .
+                                pll__('Візи') . '
                             </div>
-                        </a>
-                        <a href="#" data-wow-delay="0.5s" class="waves-effect wow tada black-text waves-light btn btn-offer">безкоштовна консультація</a>
-                    </div>
-                    <div class="col l4 s12 m6"> 
-                        <a href="<?php echo get_term_link('multivisa', 'visa_type'); ?>">
-                            <div class="single-offer center fadeInUp wow" data-wow-delay="0.5s" >
-                                <div class="offer-sign">
-                                    мультивіза
-                                </div>
-                                <div class="offer-desc">
-                                    6 місяців - 5 років
-                                </div>
-                            </div>
-                        </a>
-                        <a href="#" data-wow-delay="0.5s" class="waves-effect wow tada black-text waves-light btn btn-offer">безкоштовна консультація</a>
-                    </div>
-                    <div class="col l4 s12 m12"> 
-                        <a href="<?php echo get_term_link('national-visa', 'visa_type'); ?>">
-                            <div class="single-offer center fadeInRight wow" data-wow-delay="0.5s" >
-                                <div class="offer-sign">
-                                    національна віза
-                                </div>
-                                <div class="offer-desc">
-                                    6 - 12 місяців
-                                </div>
-                            </div>
-                        </a>
-                        <a href="#" data-wow-delay="0.5s" class="waves-effect wow tada black-text waves-light btn btn-offer">безкоштовна консультація</a>
+                            <div class="block-line"></div>
+                        </div>
+                        <div class="row container offer-block-pad">';
+                            foreach ( $terms as $term ) {
+                                echo '
+                                <div class="col l4 s12 m6"> 
+                                    <a href="' . get_term_link( $term->slug, 'visa_type') . '">
+                                        <div class="single-offer center fadeInLeft wow" data-wow-delay="0.5s">
+                                            <div class="offer-sign">' .
+                                                $term->name . '
+                                            </div>
+                                            <div class="offer-desc">' .
+                                                get_field('термін_виготовлення', $term) . '
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <a href="#" data-wow-delay="0.5s" class="waves-effect wow tada black-text waves-light btn btn-offer">' .
+                                        pll__('Безкоштовна консультація') . '
+                                    </a>
+                                </div>';
+                            }
+                            echo '
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </div>
-</div>
+        </div>';
+    }
 
 
-<?php
+
     // countries block
     $args = array(
         'post_type' => array('countries'),
@@ -117,8 +102,8 @@
         <div id="three" class="container">
             <div class="line-main wow flipInY" data-wow-delay="0.2s" style="padding: 0;margin-bottom: 50px;padding-top: 20px">
                 <div class="line-sign">
-                    <span class="small-word">АКТУАЛЬНІ НАПРЯМКИ</span>
-                    <span class="line-sign right">КРАЇНИ</span>
+                    <span class="small-word">' . pll__('Актуальні напрямки') . '</span>
+                    <span class="line-sign right">' . pll__('Країни') . '</span>
                 </div>
                 <div class="block-line"></div>
             </div>
@@ -138,7 +123,9 @@
                                     get_the_title() . '
                                 </div>
                             </a>
-                            <a href="###" class="waves-effect black-text waves-light btn btn-country">безкоштовна консультація</a>
+                            <a href="###" class="waves-effect black-text waves-light btn btn-country">' .
+                                pll__('Безкоштовна консультація') . '
+                            </a>
                         </div>
                     </div>
                 </div>';
@@ -168,9 +155,9 @@
                     <img src="' . get_template_directory_uri() . '/img/bg/3.jpg" alt="parallax">
                     <div class="mask">
                         <div class="line-main container">
-                            <div class="line-sign center white-text">ІМІГРАЦІЯ</div>
+                            <div class="line-sign center white-text">' . pll__('Імміграція') . '</div>
                             <div class="block-line white"></div>
-                            <div class="line-sign-third center white-text">Життя в Європі - запорука майбутнього</div>
+                            <div class="line-sign-third center white-text">' . pll__('Фраза 3') . '</div>
                         </div>
                         <div class="row container center">';
                             while ( $query->have_posts() ) {
@@ -184,8 +171,8 @@
                                                 get_post_meta( $post->ID, 'короткий_опис', true ) . '
                                             </div>
                                         </a>
-                                        <a href="###" class="waves-effect black-text waves-light btn btn-imig">
-                                            безкоштовна консультація
+                                        <a href="###" class="waves-effect black-text waves-light btn btn-imig">' .
+                                            pll__('Безкоштовна консультація') . '
                                         </a>
                                     </div>
                                 </div>';
@@ -255,9 +242,9 @@
         echo '
         <div id="six" class="team-block">
             <div class="line-main container team-block-pad">
-                <div class="line-sign center">НАША КОМАНДА</div>
+                <div class="line-sign center">' . pll__('Наша команда') . '</div>
                 <div class="block-line"></div>
-                <div class="line-sign-third center">Думайте про подорож - ми подбаємо про все інше</div>
+                <div class="line-sign-third center">' . pll__('Фраза 4') . '</div>
             </div>
             <div class="row container center members">';
                 while ( $query->have_posts() ) {
@@ -278,30 +265,41 @@
             </div>
         </div>';
     } //end if
+
 ?>
 
 <!--  advantages block -->
 <div id="seven">
     <div class="parallax-container container-mob-four">
-        <div class="parallax"><img src="<?php echo get_template_directory_uri(); ?>/img/bg/5.jpg" alt="parallax">
+        <div class="parallax">
+            <img src="<?php echo get_template_directory_uri(); ?>/img/bg/5.jpg" alt="parallax">
             <div class="mask">
                 <div class="row container center advantages-block-pad">
                     <div class="col l4 m4 s12">
                         <div class="advantages-block">
                             <div class="advantages-img-one"></div>
-                            <div class="advantages-desc"><span class="advantages-number">14</span> <br> Років успішної <br> роботи</div>
+                            <div class="advantages-desc">
+                                <div class="advantages-number">14</div>
+                                <?php pll_e('Років успішної роботи'); ?>
+                            </div>
                         </div>
                     </div>
                     <div class="col l4 m4 s12">
                         <div class="advantages-block">
                             <div class="advantages-img-two"></div>
-                            <div class="advantages-desc"><span class="advantages-number">10234</span> <br>Задоволених клієнтів</div>
+                            <div class="advantages-desc">
+                                <div class="advantages-number">10234</div>
+                                <?php pll_e('Задоволених клієнтів'); ?>
+                            </div>
                         </div>
                     </div>
                     <div class="col l4 m4 s12">
                         <div class="advantages-block">
                             <div class="advantages-img-three"></div>
-                            <div class="advantages-desc"><span class="advantages-number">11</span> <br>Зареєстрованих фірм у Польщі</div>
+                            <div class="advantages-desc">
+                                <div class="advantages-number">11</div>
+                                <?php pll_e('Зареєстрованих фірм у Польщі'); ?>
+                            </div>
                         </div>
                     </div>
                 </div>

@@ -4,10 +4,10 @@
         <div class="mask">
             <div class="contacts">
                 <div class="contacts-bold">
-                    Європейський Центр Бізнесу
+                    <?php pll_e('ЄВРОПЕЙСЬКИЙ ЦЕНТР БІЗНЕСУ'); ?>
                 </div>
                 <div class="contacts-thin">
-                    Львів, вул. Хімічна, 20
+                    <?php pll_e('Адреса'); ?>
                 </div>
                 <div class="contacts-bold">
                     +38 067 703 80 07 <br>
@@ -19,12 +19,10 @@
                 </div>
                 <br>
                 <div class="contacts-thin">
-                    Дніпропетровськ, вул. Комсомольська, 22 <br>
-                    Івано-Франківська область, м. Косів, вул. Нежалежності, 80а <br>
-                    м. Київ, пр. Перемоги, 67 корп. В, офіс 421
+                    <?php pll_e('Додаткова адреса'); ?>
                 </div>
                 <div class="contacts-bold">
-                    Ми працюємо з понеділка <br> по п\'ятницю, з 9 до 17 години
+                    <?php pll_e('Графік роботи'); ?>
                 </div>
             </div>
         </div>
@@ -33,10 +31,10 @@
         <div class="mask">
             <div class="contacts">
                 <div class="contacts-bold">
-                    Європейський Центр Бізнесу
+                    <?php pll_e('ЄВРОПЕЙСЬКИЙ ЦЕНТР БІЗНЕСУ'); ?>
                 </div>
                 <div class="contacts-thin">
-                    Львів, вул. Хімічна, 20
+                    <?php pll_e('Адреса'); ?>
                 </div>
                 <div class="contacts-bold">
                     +38 067 703 80 07 <br>
@@ -48,12 +46,10 @@
                 </div>
                 <br>
                 <div class="contacts-thin">
-                    Дніпропетровськ, вул. Комсомольська, 22 <br>
-                    Івано-Франківська область, м. Косів, вул. Нежалежності, 80а <br>
-                    м. Київ, пр. Перемоги, 67 корп. В, офіс 421
+                    <?php pll_e('Додаткова адреса'); ?>
                 </div>
                 <div class="contacts-bold">
-                    Ми працюємо з понеділка <br> по п\'ятницю, з 9 до 17 години
+                    <?php pll_e('Графік роботи'); ?>
                 </div>
             </div>
         </div>
@@ -66,18 +62,18 @@
             <img src="<?php echo get_template_directory_uri(); ?>/img/bg/6.jpg" alt="parallax">
             <div class="mask">
                 <div class="line-main container">
-                    <div class="line-sign center fot-form-sign white-text">ЗАМОВЛЯЙТЕ ВІЗУ</div>
+                    <div class="line-sign center fot-form-sign white-text"><?php pll_e('Замовляйте візу'); ?></div>
                     <div class="block-line white"></div>
-                    <div class="line-sign-third center white-text">Думайте про подорорж - ми подбаємо про все інше</div>
+                    <div class="line-sign-third center white-text"><?php pll_e('Фраза 4'); ?></div>
                 </div>
                 <div class="row container center">
                     <div class="col offset-l2 l8 offset-l2"> 
                         <div id="application" class="fadeInRight wow" style="margin-top: 0" data-wow-delay="0.9s">
-                            <div class=" footer-form center">
-                                Залиште Ваші дані і ми зв'яжемося з Вами та дамо відповідь на будь-яке питання
+                            <div class="footer-form center">
+                                <?php pll_e('Фраза 1'); ?> </div>
                             </div>
                             <?php
-                                echo do_shortcode('[contact-form-7 id="69" title="Форма замовлення дзвінка"]');
+                                echo do_shortcode('[cf7-form cf7key="forma-zamovlennya-dzvinka"]');
                             ?>
                         </div>
                     </div>
@@ -120,60 +116,60 @@
 </script>
 
 <script>
-mapboxgl.accessToken = 'pk.eyJ1IjoieXVyYXJvbWFuaXYiLCJhIjoiY2ltN294bnlqMDAweHdsbTlzcXc1cTZzdyJ9.TN66hFIpOH4gNEmc5vp7uA';
-var map = new mapboxgl.Map({
-    container: 'map',
-    style: 'mapbox://styles/mapbox/streets-v8',
-    zoom: 15,
-    center: [24.019064, 49.8545054],
-    interactive: true
-});
+    mapboxgl.accessToken = 'pk.eyJ1IjoieXVyYXJvbWFuaXYiLCJhIjoiY2ltN294bnlqMDAweHdsbTlzcXc1cTZzdyJ9.TN66hFIpOH4gNEmc5vp7uA';
+    var map = new mapboxgl.Map({
+        container: 'map',
+        style: 'mapbox://styles/mapbox/streets-v8',
+        zoom: 15,
+        center: [24.019064, 49.8545054],
+        interactive: true
+    });
 
-map.on('style.load', function (e) {
-    console.log(e.style.sprite);
-    map.addSource('markers', {
-        "type": "geojson",
-        "data": {
-            "type": "FeatureCollection",
-            "features": [{
-                "type": "Feature",
-                "geometry": {
-                    "type": "Point",
-                    "coordinates": [24.0248464, 49.8545054]
-                },
-                "properties": {
-                    "title": "Європейський Центр Бізнесу",
-                    "marker-symbol": "default_marker"
-                }
-            }]
+    map.on('style.load', function (e) {
+        console.log(e.style.sprite);
+        map.addSource('markers', {
+            "type": "geojson",
+            "data": {
+                "type": "FeatureCollection",
+                "features": [{
+                    "type": "Feature",
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [24.0248464, 49.8545054]
+                    },
+                    "properties": {
+                        "title": "<?php echo pll__('ЄВРОПЕЙСЬКИЙ ЦЕНТР БІЗНЕСУ'); ?>",
+                        "marker-symbol": "default_marker"
+                    }
+                }]
+            }
+        });
+        map.addLayer({
+            "id": "title",
+            "source": "markers",
+            "type": "symbol",
+            "layout": {
+                "icon-image": "{marker-symbol}",
+                "text-field": "{title}",
+                "text-font": ["Open Sans Semibold", "Arial Unicode MS Bold"],
+                "text-offset": [0, 0.6],
+                "text-anchor": "top"
+            }
+        });
+        map.addLayer({
+            "id": "point",
+            "source": "markers",
+            "type": "circle",
+            "paint": {
+            "circle-radius": 10,
+            "circle-color": "#ffa200"
         }
+        
+        });
+        // Add zoom and rotation controls to the map.
+
+        map.addControl(new mapboxgl.NavigationControl());
     });
-    map.addLayer({
-        "id": "title",
-        "source": "markers",
-        "type": "symbol",
-        "layout": {
-            "icon-image": "{marker-symbol}",
-            "text-field": "{title}",
-            "text-font": ["Open Sans Semibold", "Arial Unicode MS Bold"],
-            "text-offset": [0, 0.6],
-            "text-anchor": "top"
-        }
-    });
-    map.addLayer({
-        "id": "point",
-        "source": "markers",
-        "type": "circle",
-        "paint": {
-        "circle-radius": 10,
-        "circle-color": "#ffa200"
-    }
-       
-    });
-    // Add zoom and rotation controls to the map.
-map.addControl(new mapboxgl.NavigationControl());
-   
-});
 </script>
 
 </body>

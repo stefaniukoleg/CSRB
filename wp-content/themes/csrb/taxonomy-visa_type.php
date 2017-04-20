@@ -6,7 +6,8 @@
         echo '
         <div class="visa-first-block">
             <div class="parallax-container visa-main">
-                <div class="parallax"><img src="' . get_template_directory_uri() . '/img/bg/short-1.jpg">
+                <div class="parallax">
+                    <img src="' . get_template_directory_uri() . '/img/bg/short-1.jpg">
                     <div class="mask-visa-first">
                         <div class="row container">
                             <div class="col l12 m12 s12">
@@ -76,16 +77,12 @@
                     <div class="mask">
                         <div class="row container">
                             <div class="col l12 s12 m12 center"> 
-                                <div class="single-sign fadeInLeft wow" data-wow-delay="0.2s" >
-                                    <div>- Доплата за термінове виготовлення +30 євро</div>
-                                    <div>- Фото має бути кольоровим на білому фоні 3,5 x 4,5 cм зроблене не давніше 6 місяців</div>
-                                    <div>- Закордонний паспорт Паспорт повинен містити підпис та бути дійсним щонайменше 3 місяці від дати закінчення дії візи. Термін дії закордонного паспорту не повинен перевищувати 10 років. Продовжені паспорти не прийматимуться. Закордонний паспорт повинен містити щонайменше 2 чисті сторінки (призначені для візи). Слід додати копії сторінок паспорту з попередніми візами Шенген</div>
-                                    <div>- У випадку наявності інших закордонних паспортів слід додати їх (оригінал)</div>
-                                    <div>- Довідка з м.р. може бути додатковим документом, що позитивно вплаває на рішення видачі візи.</div>
-                                    <div>- Термін оформлення може залежати від графіку подання та отримання документів</div>
+                                <div class="single-sign fadeInLeft wow" data-wow-delay="0.2s">';
+                                    $term = get_queried_object();
+                                    echo get_field('додатковий_опис', $term);
+                                echo '
                                 </div>
                             </div>
-
                         </div>
                     </div>
                 </div>

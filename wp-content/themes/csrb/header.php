@@ -47,7 +47,7 @@
         }
     </style>
     <script src='https://api.mapbox.com/mapbox-gl-js/v0.35.1/mapbox-gl.js'></script>
-<link href='https://api.mapbox.com/mapbox-gl-js/v0.35.1/mapbox-gl.css' rel='stylesheet' />
+    <link href='https://api.mapbox.com/mapbox-gl-js/v0.35.1/mapbox-gl.css' rel='stylesheet' />
 </head>
 
 <body>
@@ -62,19 +62,33 @@
                 </div>
             </a>
             <div class="lang-block">
-                <a href="<?php echo get_home_url(); ?>"><img class="lang-img" src="<?php echo get_template_directory_uri(); ?>/img/languages/rus.svg" alt="logo"></a>
-               <a href="<?php echo get_home_url(); ?>"> <img class="lang-img" src="<?php echo get_template_directory_uri(); ?>/img/languages/ukr.svg" alt="logo"></a>
+                <?php
+                    //pll_the_languages( array( 'show_flags' => 1,'show_names' => 0 ) );
+                    $languages = pll_the_languages(array('raw'=>1)); 
+                    foreach( $languages as $language ) {
+                        echo '
+                        <a href="' . $language[url] . '">
+                            <img class="lang-img" src="' . $language[flag] . '" alt="logo">
+                        </a>';
+                    }
+                /*
+                    <a href="<?php echo get_home_url(); ?>"><img class="lang-img" src="<?php echo get_template_directory_uri(); ?>/img/languages/rus.svg" alt="logo"></a>
+                    <a href="<?php echo get_home_url(); ?>"> <img class="lang-img" src="<?php echo get_template_directory_uri(); ?>/img/languages/ukr.svg" alt="logo"></a>
+                */
+                ?>
             </div>
             <ul id="top-menu" class="left menu-block hide-on-med-and-down">
-                <li><a href="<?php echo get_home_url(); ?>/#two">Візи</a></li>
-                <li><a href="<?php echo get_home_url(); ?>/#three">Країни</a></li>
-                <li><a href="<?php echo get_home_url(); ?>/#four">Іміграція</a></li>
-                <li><a href="<?php echo get_home_url(); ?>/#six">Команда</a></li>
-                <li><a href="<?php echo get_home_url(); ?>/#eight">Контакти</a></li>
+                <li><a href="<?php echo get_home_url(); ?>/#two"><?php pll_e('Візи'); ?></a></li>
+                <li><a href="<?php echo get_home_url(); ?>/#three"><?php pll_e('Країни'); ?></a></li>
+                <li><a href="<?php echo get_home_url(); ?>/#four"><?php pll_e('Імміграція'); ?></a></li>
+                <li><a href="<?php echo get_home_url(); ?>/#six"><?php pll_e('Команда'); ?></a></li>
+                <li><a href="<?php echo get_home_url(); ?>/#eight"><?php pll_e('Контакти'); ?></a></li>
             </ul>
             <ul>
                 <li>
-                    <a href="#modal1" class="hide-on-small-only waves-effect white-text waves-light btn btn-pad">Анкетна інформація</a>
+                    <a href="#modal1" class="hide-on-small-only waves-effect white-text waves-light btn btn-pad">
+                        <?php pll_e('Анкетна інформація'); ?>
+                    </a>
                 </li>
                 <li>
                     <div class="hide-on-small-only social-block">
@@ -84,11 +98,11 @@
                 </li>
             </ul>
             <ul class="side-nav" id="mobile-demo">
-                <li><a href="<?php echo get_home_url(); ?>/#two">Візи</a></li>
-                <li><a href="<?php echo get_home_url(); ?>/#three">Країни</a></li>
-                <li><a href="<?php echo get_home_url(); ?>/#four">Іміграція</a></li>
-                <li><a href="<?php echo get_home_url(); ?>/#six">Команда</a></li>
-                <li><a href="<?php echo get_home_url(); ?>/#eight">Контакти</a></li>
+                <li><a href="<?php echo get_home_url(); ?>/#two"><?php pll_e('Візи'); ?></a></li>
+                <li><a href="<?php echo get_home_url(); ?>/#three"><?php pll_e('Країни'); ?></a></li>
+                <li><a href="<?php echo get_home_url(); ?>/#four"><?php pll_e('Імміграція'); ?></a></li>
+                <li><a href="<?php echo get_home_url(); ?>/#six"><?php pll_e('Команда'); ?></a></li>
+                <li><a href="<?php echo get_home_url(); ?>/#eight"><?php pll_e('Контакти'); ?></a></li>
             </ul>
         </div>
     </nav>
