@@ -1,5 +1,8 @@
 # CSRB
 
+ver. 0.97.1
+  - виведення заголовку віз з БД (taxonomy-visa_type.php)
+
 ver. 0.97
   - встановив плагіни:
     - polylang

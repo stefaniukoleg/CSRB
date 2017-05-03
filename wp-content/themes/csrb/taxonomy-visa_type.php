@@ -34,8 +34,8 @@
                 <div class="col l3 m3 s6">
                     <div class="visa-info">
                         <div class="visa-name" style="height: 143px;">
-                            <div class="visa-title center">
-                                C-01
+                            <div class="visa-title center">' .
+                                get_the_title() . '
                                 <div>' . get_post_meta( $post->ID, 'напрям', true ) . '</div>
                             </div>
                             <div class="center">' . get_post_meta( $post->ID, 'вікова_категорія', true ) . '</div>
