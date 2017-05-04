@@ -94,6 +94,31 @@
     <img class="callback-image" src="<?php echo get_template_directory_uri(); ?>/img/pictures/telephone.svg" alt="callback">
 </a>
 
+<!-- modals -->
+<div id="modal1" class="modal anketa-bg">
+    <div class="mask">
+        <div class="modal-content center">
+            <div class="form-label-anketa center">
+            <?php pll_e('Фраза 1'); ?> </div>
+            <?php
+                echo do_shortcode('[cf7-form cf7key="forma-zamovlennya-dzvinka"]');
+            ?>
+        </div>
+    </div>
+</div>
+
+<div id="modal2" class="modal anketa-bg">
+    <div class="mask">
+        <div class="modal-content center">
+            <div class="form-label-anketa center">
+            <?php pll_e('Фраза 1'); ?> </div>
+            <?php
+                echo do_shortcode('[cf7-form cf7key="anketna-informatsiya"]');
+            ?>
+        </div>
+    </div>
+</div>
+<!-- end modals-->
 <!--Import jQuery before materialize.js-->
 <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js" ></script>

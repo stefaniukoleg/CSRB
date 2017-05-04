@@ -1,5 +1,8 @@
 # CSRB
 
+ver. 0.98.
+  - alpha reliase
+
 ver. 0.97.1
   - виведення заголовку віз з БД (taxonomy-visa_type.php)
 

@@ -7,16 +7,12 @@
             echo '
             <div class="visa-first-block">
                 <div class="parallax-container visa-main">
-                    <div class="parallax">';
-                        $img_id = get_post_meta( $post->ID, 'зображення_2', true );
-                        $img_url = wp_get_attachment_image_src( $img_id, 'large' );
-                        $img_url = $img_url[0];
-                        echo '
-                        <img src="' . $img_url . '">
+                    <div class="parallax">
+                        <img src="' . get_the_post_thumbnail_url() . '">
                         <div class="mask-visa-first">
                             <div class="row container">
                                 <div class="col l12 m12 s12">
-                                    <div class="visa-main-text center">' . get_the_title() . '</div>
+                                    <div class="visa-main-text center ">' . get_the_title() . '</div>
                                     <div class="offset-l4 offset-m4 offset-s4 col l4 m4 s4 visa-first-block-line center"></div>
                                     <div class="col l12 m12 s12"></div>
                                 </div>
@@ -26,19 +22,15 @@
                 </div>
             </div>
 
-            <div class="row container">';
+            <div class="row container juristic-text">';
                 $table = get_post_meta( $post->ID, 'таблиця', true );
                 echo $table . '
             </div>
 
             <div class="single-block">
                 <div class="parallax-container container-mob-single">
-                    <div class="parallax">';
-                        $img_id = get_post_meta( $post->ID, 'зображення_3', true );
-                        $img_url = wp_get_attachment_image_src( $img_id, 'large' );
-                        $img_url = $img_url[0];
-                        echo '
-                        <img src="' . $img_url . '" alt="parallax">
+                    <div class="parallax">
+                        <img src="' . get_template_directory_uri() . '/img/bg/country-2.jpg" alt="parallax">
                         <div class="mask">
                             <div class="row container">
                                 <div class="col l12 s12 m12 center"> 
@@ -52,8 +44,6 @@
                     </div>
                 </div>  
             </div>';
-
-            
         endwhile;
             wp_reset_postdata();
     endif;
@@ -61,3 +51,14 @@
 	//footer
 	get_footer();
 ?>
+<div id="modal2" class="modal anketa-bg">
+    <div class="mask">
+        <div class="modal-content center">
+            <div class="form-label-anketa center">
+            <?php pll_e('Фраза 1'); ?> </div>
+            <?php
+                echo do_shortcode('[contact-form-7 id="149" title="Анкетна інформація"]');
+            ?>
+        </div>
+    </div>
+</div>

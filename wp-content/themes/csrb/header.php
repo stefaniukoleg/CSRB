@@ -86,7 +86,7 @@
             </ul>
             <ul>
                 <li>
-                    <a href="#modal1" class="hide-on-small-only waves-effect white-text waves-light btn btn-pad">
+                    <a href="#modal2" class="hide-on-small-only waves-effect white-text waves-light btn btn-pad">
                         <?php pll_e('Анкетна інформація'); ?>
                     </a>
                 </li>

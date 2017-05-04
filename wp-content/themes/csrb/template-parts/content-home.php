@@ -1,14 +1,4 @@
-<div id="modal1" class="modal anketa-bg">
-    <div class="mask">
-        <div class="modal-content center">
-            <div class="form-label-anketa center">
-            <?php pll_e('Фраза 1'); ?> </div>
-            <?php
-                echo do_shortcode('[cf7-form cf7key="forma-zamovlennya-dzvinka"]');
-            ?>
-        </div>
-    </div>
-</div>
+
 
 <!-- main-block --> 
 <div id="one" class="main-block">
@@ -72,7 +62,7 @@
                                             </div>
                                         </div>
                                     </a>
-                                    <a href="#" data-wow-delay="0.5s" class="waves-effect wow tada black-text waves-light btn btn-offer">' .
+                                    <a href="#" class="waves-effect  black-text waves-light btn btn-offer">' .
                                         pll__('Безкоштовна консультація') . '
                                     </a>
                                 </div>';
@@ -100,7 +90,7 @@
     if ( $query->have_posts() ) {
         echo '
         <div id="three" class="container">
-            <div class="line-main wow flipInY" data-wow-delay="0.2s" style="padding: 0;margin-bottom: 50px;padding-top: 20px">
+            <div class="line-main" style="padding: 0;margin-bottom: 50px;padding-top: 20px">
                 <div class="line-sign">
                     <span class="small-word">' . pll__('Актуальні напрямки') . '</span>
                     <span class="line-sign right">' . pll__('Країни') . '</span>
@@ -116,10 +106,10 @@
                     $img_url = wp_get_attachment_image_src( $img_id, 'large' );
                     $img_url = $img_url[0];
                     echo '
-                    <div class="country-main" style="background-image: url(' . $img_url . ')">
+                    <div class="country-main wow fadeInRight" data-wow-delay=".7s" style="background-image: url(' . $img_url . ')">
                         <div class="mask">
                             <a href="' . get_the_permalink() . '">
-                                <div class="country-name-min white-text">' .
+                                <div class="country-name-min  white-text">' .
                                     get_the_title() . '
                                 </div>
                             </a>
@@ -140,14 +130,14 @@
     // immigrations block
     $args = array(
         'post_type' => array('immigrations'),
-        'posts_per_page' => 2,
+        'posts_per_page' => 3,
         'publish' => true,
         'orderby' => 'date',
         'order' => 'DESC'
     );
     $post_count = 0;
     $query = new WP_Query( $args );
-    if( $query->have_posts() ) {
+    if ( $query->have_posts() ) {
         echo '
         <div id="four" class="imigration-block">
             <div class="parallax-container container-mob-third">
@@ -155,7 +145,7 @@
                     <img src="' . get_template_directory_uri() . '/img/bg/3.jpg" alt="parallax">
                     <div class="mask">
                         <div class="line-main container">
-                            <div class="line-sign center white-text">' . pll__('Імміграція') . '</div>
+                            <div class="line-sign center white-text">' . pll__('Правова допомога') . '</div>
                             <div class="block-line white"></div>
                             <div class="line-sign-third center white-text">' . pll__('Фраза 3') . '</div>
                         </div>
@@ -163,8 +153,8 @@
                             while ( $query->have_posts() ) {
                                 $query->the_post();
                                 echo '
-                                <div class="col l6 s12 m6"> 
-                                    <div class="imigration-offer ">
+                                <div class="col l4 s12 m4"> 
+                                    <div class="imigration-offer fadeInDown wow" data-wow-delay="0.6s">
                                         <a href="' . get_the_permalink() . '">
                                             <div class="imigration-type">' . get_the_title() . '</div>
                                             <div class="imigration-desc">' . 
@@ -208,7 +198,7 @@
                                 $query->the_post();
                                 echo '
                                 <div class="col l12 s12"> 
-                                    <div class="promotion-offer">
+                                    <div class="promotion-offer wow rollIn">
                                         <div class="promotion-type">' . get_the_title() . '</div>
                                         <div class="block-line line-promotion"></div>
                                         <div class="promotion-desc">';
@@ -246,7 +236,7 @@
                 <div class="block-line"></div>
                 <div class="line-sign-third center">' . pll__('Фраза 4') . '</div>
             </div>
-            <div class="row container center members">';
+            <div class="row container center members wow zoomIn" data-wow-delay="0.5s">';
                 while ( $query->have_posts() ) {
                     $query->the_post();
                     //get_the_post_thumbnail_url()
@@ -274,7 +264,7 @@
         <div class="parallax">
             <img src="<?php echo get_template_directory_uri(); ?>/img/bg/5.jpg" alt="parallax">
             <div class="mask">
-                <div class="row container center advantages-block-pad">
+                <div class="row container center advantages-block-pad lightSpeedIn wow">
                     <div class="col l4 m4 s12">
                         <div class="advantages-block">
                             <div class="advantages-img-one"></div>
