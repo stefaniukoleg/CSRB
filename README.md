@@ -1,6 +1,10 @@
 # CSRB
 
-ver. 0.98.
+ver. 0.98.1
+  - змінив форми зворотнього звязку (callback-form.php, callback-config.php, callback.js)
+  - переклав кілька слів для форми (csrb.sql)
+
+ver. 0.98
   - alpha reliase
 
 ver. 0.97.1

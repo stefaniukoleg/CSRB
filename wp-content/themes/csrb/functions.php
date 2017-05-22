@@ -141,10 +141,11 @@ if (!current_user_can('edit_users')) {
     pll_register_string('Головна сторінка', 'Років успішної роботи');
     pll_register_string('Головна сторінка', 'Задоволених клієнтів');
     pll_register_string('Головна сторінка', 'Зареєстрованих фірм у Польщі');
+    pll_register_string('Форма замовлення дзвінка', 'Ваше ім\'я');
+    pll_register_string('Форма замовлення дзвінка', 'Ваш Email');
+    pll_register_string('Форма замовлення дзвінка', 'Ваш телефон');
     pll_register_string('Контактна інформація', 'Адреса');
     pll_register_string('Контактна інформація', 'Додаткова адреса', 'polylang', true);
     pll_register_string('Контактна інформація', 'Графік роботи');
     pll_register_string('Підвал', 'Замовляйте візу');
-    
-    
 //eng polylang

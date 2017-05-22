@@ -73,7 +73,8 @@
                                 <?php pll_e('Фраза 1'); ?> </div>
                             </div>
                             <?php
-                                echo do_shortcode('[cf7-form cf7key="forma-zamovlennya-dzvinka"]');
+                                //echo do_shortcode('[cf7-form cf7key="forma-zamovlennya-dzvinka"]');
+                                get_template_part('/template-parts/callback', 'form');
                             ?>
                         </div>
                     </div>
@@ -101,7 +102,8 @@
             <div class="form-label-anketa center">
             <?php pll_e('Фраза 1'); ?> </div>
             <?php
-                echo do_shortcode('[cf7-form cf7key="forma-zamovlennya-dzvinka"]');
+                //echo do_shortcode('[cf7-form cf7key="forma-zamovlennya-dzvinka"]');
+                get_template_part('/template-parts/callback', 'form');
             ?>
         </div>
     </div>
