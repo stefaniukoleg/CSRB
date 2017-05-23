@@ -74,7 +74,7 @@
                             </div>
                             <?php
                                 //echo do_shortcode('[cf7-form cf7key="forma-zamovlennya-dzvinka"]');
-                                get_template_part('/template-parts/callback', 'form');
+                                get_template_part('/template-parts/forms/callback2');
                             ?>
                         </div>
                     </div>
@@ -103,7 +103,7 @@
             <?php pll_e('Фраза 1'); ?> </div>
             <?php
                 //echo do_shortcode('[cf7-form cf7key="forma-zamovlennya-dzvinka"]');
-                get_template_part('/template-parts/callback', 'form');
+                get_template_part('/template-parts/forms/callback3');
             ?>
         </div>
     </div>
@@ -115,7 +115,8 @@
             <div class="form-label-anketa center">
             <?php pll_e('Фраза 1'); ?> </div>
             <?php
-                echo do_shortcode('[cf7-form cf7key="anketna-informatsiya"]');
+                //echo do_shortcode('[cf7-form cf7key="anketna-informatsiya"]');
+                get_template_part('/template-parts/forms/personal-information');
             ?>
         </div>
     </div>

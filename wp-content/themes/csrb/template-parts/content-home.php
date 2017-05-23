@@ -19,7 +19,7 @@
                             </div>
                             <?php
                                 //echo do_shortcode('[cf7-form cf7key="forma-zamovlennya-dzvinka"]');
-                                get_template_part('/template-parts/callback', 'form');
+                                get_template_part('/template-parts/forms/callback1');
                             ?>
                         </div>
                     </div>
