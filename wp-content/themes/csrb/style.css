@@ -133,7 +133,7 @@ nav {
     
 }
 .single-sign div{
-padding-bottom: 40px;
+padding-bottom: 15px;
 }
 .main-sign div:nth-child(1) {
     font-size: 60px;
@@ -167,22 +167,16 @@ padding-bottom: 40px;
 select{
     display: block;
 }
-#applicationName,
-#applicationEmail,
-#applicationTelephone,
-#applicationDate,
-select,
-#applicationAvailability,
-#applicationNumber{
-    width: 80%;
-    height: 43px;
-    background: none;
-    margin-top: 15px;
-    border: 1px solid #fff;
-    border-radius: 20px;
-    text-align: center;
-    color: #fff;
-    font-size: 24px;
+.application-field{
+    width: 80% !important;
+    height: 43px !important;
+    background: none !important;
+    margin-top: 15px !important;
+    border: 1px solid #fff !important;
+    border-radius: 20px !important;
+    padding-left: 10px !important; 
+    color: #fff !important;
+    font-size: 24px !important;
 }
 option{
     color: black;
@@ -190,13 +184,7 @@ option{
 select{
     margin: 0 auto;
 }
-#applicationName:focus,
-#applicationEmail:focus,
-#applicationTelephone:focus,
-#applicationDate:focus,
-#applicationDuration:focus,
-#applicationAvailability:focus,
-#applicationNumber:focus,
+.application-field,
  select:focus {
     border: 1px solid #30ad64;
 }
@@ -421,21 +409,15 @@ select{
     background-size: cover;
 }
 
-#applicationName:focus,
-#applicationEmail:focus,
-#applicationTelephone:focus,
-#applicationDate:focus,
-#applicationDuration:focus,
-#applicationAvailability:focus,
-#applicationNumber:focus,
+.application-field:focus,
 select:focus {
-    border: 1px solid #FFC107;
+    border: 1px solid #FFC107 !important;
 }
 
 input[type=tel]:focus:not([readonly]),
 input[type=email]:focus:not([readonly]),
 input:not([type]):focus:not([readonly]) {
-    box-shadow: 0 1px 0 0 #ffcc00;
+    box-shadow: 0 1px 0 0 #ffcc00 !important;
 }
 
 .line-sign-third {
@@ -764,4 +746,16 @@ input:not([type]):focus:not([readonly]) {
     padding-top: 30px;
     padding-bottom: 20px;
     text-align: center;
+}
+.select-field{
+    border-radius: 20px;
+    width: 80%;
+    background: none;
+    color: white;
+}
+.label-color{
+    color: white;
+    font-size: 19px;
+    margin: 5px;
+    
 }

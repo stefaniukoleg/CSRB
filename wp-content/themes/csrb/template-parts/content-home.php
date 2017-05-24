@@ -38,7 +38,7 @@
 
     if ( !empty($terms) ) {
         echo '
-        <div id="two" class="offer-block ">
+        <div id="visa" class="offer-block ">
             <div class="parallax-container container-mob-sec">
                 <div class="parallax">
                     <img src="' . get_template_directory_uri() . '/img/bg/2.jpg" alt="parallax">
@@ -90,7 +90,7 @@
     $query = new WP_Query( $args );
     if ( $query->have_posts() ) {
         echo '
-        <div id="three" class="container">
+        <div id="country" class="container">
             <div class="line-main" style="padding: 0;margin-bottom: 50px;padding-top: 20px">
                 <div class="line-sign">
                     <span class="small-word">' . pll__('Актуальні напрямки') . '</span>
@@ -140,7 +140,7 @@
     $query = new WP_Query( $args );
     if ( $query->have_posts() ) {
         echo '
-        <div id="four" class="imigration-block">
+        <div id="imigration" class="imigration-block">
             <div class="parallax-container container-mob-third">
                 <div class="parallax">
                     <img src="' . get_template_directory_uri() . '/img/bg/3.jpg" alt="parallax">
@@ -231,7 +231,7 @@
     $query = new WP_Query( $args );
     if ( $query->have_posts() ) {
         echo '
-        <div id="six" class="team-block">
+        <div id="team" class="team-block">
             <div class="line-main container team-block-pad">
                 <div class="line-sign center">' . pll__('Наша команда') . '</div>
                 <div class="block-line"></div>

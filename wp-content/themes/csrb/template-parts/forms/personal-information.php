@@ -1,16 +1,16 @@
 <form id="personal_information_form">
-    <input type="hidden" name="personal_information" value="true">
+    <input class="application-field" type="hidden" name="personal_information" value="true">
 
-    <input type="text" name="user_name" placeholder="<?php echo pll__('Ваше ім\'я'); ?>" required /><br />
-    <input type="email" name="user_email" placeholder="<?php echo pll__('Ваш Email'); ?>" required /><br />
-    <input type="tel" name="user_phone" placeholder="<?php echo pll__('Ваш телефон'); ?>" required /><br />
+    <input class="application-field" type="text" name="user_name" placeholder="<?php echo pll__('Ваше ім\'я'); ?>" required /><br />
+    <input class="application-field" type="email" name="user_email" placeholder="<?php echo pll__('Ваш Email'); ?>" required /><br />
+    <input class="application-field" type="tel" name="user_phone" placeholder="<?php echo pll__('Ваш телефон'); ?>" required /><br />
 
-    <?php echo pll__('Коли планується подорож'); ?>:
-    <input type="date" name="travel_date" required /><br />
-    <input type="text" name="travel_place" placeholder="<?php echo pll__('Куди'); ?>" required /><br />
+    <label class="label-color"><?php echo pll__('Коли планується подорож'); ?>:</label>
+    <input class="application-field" type="date" name="travel_date" required /><br />
+    <input class="application-field" type="text" name="travel_place" placeholder="<?php echo pll__('Куди'); ?>" required /><br />
     
-    <?php echo pll__('Яким транспортом'); ?>:
-    <select name="travel_transport">
+    <label class="label-color"><?php echo pll__('Яким транспортом'); ?>:</label>
+    <select class="select-field" name="travel_transport">
         <option value="<?php echo pll__('літак'); ?>">
             <?php echo pll__('літак'); ?>
         </option>
@@ -25,8 +25,8 @@
         </option>
     </select>
     
-    <?php echo pll__('Тривалість планового перебування'); ?>:
-    <select name="travel_duration">
+    <label class="label-color"><?php echo pll__('Тривалість планового перебування'); ?>:</label>
+    <select class="select-field" name="travel_duration">
         <option value="<?php echo pll__('до тижня'); ?>">
             <?php echo pll__('до тижня'); ?>
         </option>
@@ -41,8 +41,9 @@
         </option>
     </select>
     
-    <?php echo pll__('Наявність віз Шенген за останні 3 роки'); ?>:
-    <select name="visa_availability">
+    <label class="label-color"><?php echo pll__('Наявність віз Шенген за останні 3 роки'); ?>:</label>
+    <br>
+    <select class="select-field" name="visa_availability">
         <option value="<?php echo pll__('так'); ?>">
             <?php echo pll__('так'); ?>
         </option>
@@ -51,7 +52,7 @@
         </option>
     </select>
 
-    <input type="number" name="travelers_number" placeholder="<?php echo pll__('Кількість подорожуючих'); ?>" required /><br />
+    <input class="application-field" type="number" name="travelers_number" placeholder="<?php echo pll__('Кількість подорожуючих'); ?>" required /><br />
 
     <button class="applicationButton"><?php echo pll__('Безкоштовна консультація'); ?></button>
 </form>

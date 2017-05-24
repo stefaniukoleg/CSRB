@@ -1,4 +1,4 @@
-<div id="eight">
+<div id="contacts">
     <div id='map' style='width: 100%; height: 450px;'></div>
     <div class="contacts-block hide-on-small-only">
         <div class="mask">
@@ -66,9 +66,9 @@
                     <div class="block-line white"></div>
                     <div class="line-sign-third center white-text"><?php pll_e('Фраза 4'); ?></div>
                 </div>
-                <div class="row container center">
+                <div class="row container center fadeInRight wow">
                     <div class="col offset-l2 l8 offset-l2"> 
-                        <div id="application" class="fadeInRight wow" style="margin-top: 0" data-wow-delay="0.9s">
+                        <div id="application"  style="margin-top: 0" data-wow-delay="0.9s">
                             <div class="footer-form center">
                                 <?php pll_e('Фраза 1'); ?> </div>
                             </div>
