@@ -1,9 +1,19 @@
 $(document).ready(function() {
 	$("#callback-form1").submit(function() {
+		var
+			currentPageUrl = window.location.href,
+			configUrl = "";
+		
+		if ( currentPageUrl.indexOf('/ru/') >= 0 ) {    //if russian language is true
+			configUrl = "../wp-content/themes/csrb/template-parts/forms/config.php";
+		}
+		else { //if ukrainian language is true
+			configUrl = "wp-content/themes/csrb/template-parts/forms/config.php";
+		}
 		$.ajax({
 			type: "POST",
 			//url: "wp-content/themes/csrb/template-parts/mail.php",
-			url: "wp-content/themes/csrb/template-parts/forms/config.php",
+			url: configUrl,
 			data: $(this).serialize()
 		}).done(function() {
 			$(this).find("input").val("");

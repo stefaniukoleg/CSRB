@@ -131,6 +131,7 @@ if (!current_user_can('edit_users')) {
     pll_register_string('Навігація', 'Команда');
     pll_register_string('Навігація', 'Контакти');
     pll_register_string('Навігація', 'Анкетна інформація');
+
     pll_register_string('Головна сторінка', 'Фраза 1', 'polylang', true);
     pll_register_string('Головна сторінка', 'Фраза 2', 'polylang', true);
     pll_register_string('Головна сторінка', 'Фраза 3', 'polylang', true);
@@ -141,11 +142,35 @@ if (!current_user_can('edit_users')) {
     pll_register_string('Головна сторінка', 'Років успішної роботи');
     pll_register_string('Головна сторінка', 'Задоволених клієнтів');
     pll_register_string('Головна сторінка', 'Зареєстрованих фірм у Польщі');
+
     pll_register_string('Форма замовлення дзвінка', 'Ваше ім\'я');
     pll_register_string('Форма замовлення дзвінка', 'Ваш Email');
     pll_register_string('Форма замовлення дзвінка', 'Ваш телефон');
+
+    pll_register_string('Анкетна інформація', 'Коли планується подорож');
+    pll_register_string('Анкетна інформація', 'Куди');
+    pll_register_string('Анкетна інформація', 'Яким транспортом');
+    pll_register_string('Анкетна інформація', 'літак');
+    pll_register_string('Анкетна інформація', 'автобус');
+    pll_register_string('Анкетна інформація', 'поїзд');
+    pll_register_string('Анкетна інформація', 'автомобіль');
+    pll_register_string('Анкетна інформація', 'Тривалість планового перебування');
+    pll_register_string('Анкетна інформація', 'до тижня');
+    pll_register_string('Анкетна інформація', 'до місяця');
+    pll_register_string('Анкетна інформація', 'до року');
+    pll_register_string('Анкетна інформація', 'більше');
+    pll_register_string('Анкетна інформація', 'Наявність віз Шенген за останні 3 роки');
+    pll_register_string('Анкетна інформація', 'так');
+    pll_register_string('Анкетна інформація', 'ні');
+    pll_register_string('Анкетна інформація', 'Кількість подорожуючих');
+
+    pll_register_string('email', 'Ім\'я');
+    pll_register_string('email', 'Телефон');
+    pll_register_string('email', 'Замовлення дзвінка');
+        
     pll_register_string('Контактна інформація', 'Адреса');
     pll_register_string('Контактна інформація', 'Додаткова адреса', 'polylang', true);
     pll_register_string('Контактна інформація', 'Графік роботи');
+
     pll_register_string('Підвал', 'Замовляйте візу');
 //eng polylang
