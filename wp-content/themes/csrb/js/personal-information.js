@@ -4,14 +4,14 @@ $(document).ready(function() {
 		$('#callback-button4').html('<i class="material-icons">sync</i>');
 		var
 			currentPageUrl = window.location.href,
-			configUrl = "";
+			configUrl = configUrl = "wp-content/themes/csrb/template-parts/forms/config.php",
+			resultMessage = "Дякуємо за заявку! Скоро ми з Вами зв'яжемося.";
 		
 		if ( currentPageUrl.indexOf('/ru/') >= 0 ) {    //if russian language is true
 			configUrl = "../wp-content/themes/csrb/template-parts/forms/config.php";
+			resultMessage = "Спасибо за заявку! Скоро мы с Вами свяжемся.";
 		}
-		else { //if ukrainian language is true
-			configUrl = "wp-content/themes/csrb/template-parts/forms/config.php";
-		}
+
 		$.ajax({
 			type: "POST",
 			//url: "wp-content/themes/csrb/template-parts/mail.php",
@@ -19,7 +19,7 @@ $(document).ready(function() {
 			data: $(this).serialize()
 		}).done(function() {
 			$(this).find("input").val("");
-			alert("Дякуємо за заявку! Скоро ми з Вами зв'яжемося.");
+			alert(resultMessage);
 			$("#personal_information_form").trigger("reset");
 			$('#callback-button4').text(loadButton);
 		});
