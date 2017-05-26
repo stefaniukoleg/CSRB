@@ -220,7 +220,7 @@ select{
 
 .applicationButton {
     margin-top: 15px;
-    background: #ffcc00;
+    background: #ffcc00 !important;
     border: none;
     width: 80%;
     height: 53px;
@@ -233,7 +233,7 @@ select{
 }
 
 .applicationButton:hover {
-    background: #ffa200;
+    background: #ffa200 !important;
 }
 
 .form-label {
@@ -756,6 +756,22 @@ input:not([type]):focus:not([readonly]) {
 .label-color{
     color: white;
     font-size: 19px;
-    margin: 5px;
+    line-height: 2.5;
     
+}
+
+#personal_information_form > label:nth-child(13),
+#personal_information_form > label:nth-child(15),
+#personal_information_form > label:nth-child(17){
+    line-height: 3.5;
+}
+
+nav .button-collapse{
+    margin: 0 !important;
+   
+}
+
+.empty-block{
+    position: absolute;
+    margin-top: -80px;
 }

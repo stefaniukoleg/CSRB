@@ -1,4 +1,5 @@
-<div id="contacts">
+<div id="contacts" class="empty-block"></div>
+<div>
     <div id='map' style='width: 100%; height: 450px;'></div>
     <div class="contacts-block hide-on-small-only">
         <div class="mask">
@@ -197,6 +198,13 @@
         // Add zoom and rotation controls to the map.
 
         map.addControl(new mapboxgl.NavigationControl());
+    });
+</script>
+<script>
+    $(".button-collapse").sideNav(
+    {
+        closeOnClick: true,
+        draggable: true
     });
 </script>
 

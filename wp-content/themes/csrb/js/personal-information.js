@@ -1,5 +1,7 @@
 $(document).ready(function() {
 	$("#personal_information_form").submit(function() {
+		var loadButton = $('#callback-button4').text();
+		$('#callback-button4').html('<i class="material-icons">sync</i>');
 		var
 			currentPageUrl = window.location.href,
 			configUrl = "";
@@ -19,6 +21,7 @@ $(document).ready(function() {
 			$(this).find("input").val("");
 			alert("Дякуємо за заявку! Скоро ми з Вами зв'яжемося.");
 			$("#personal_information_form").trigger("reset");
+			$('#callback-button4').text(loadButton);
 		});
 		return false;
 	});

@@ -1,5 +1,7 @@
 $(document).ready(function() {
 	$("#callback-form3").submit(function() {
+		var loadButton = $('#callback-button3').text();
+		$('#callback-button3').html('<i class="material-icons wow rotateIn">sync</i>');
 		var
 			currentPageUrl = window.location.href,
 			configUrl = "";
@@ -19,6 +21,7 @@ $(document).ready(function() {
 			$(this).find("input").val("");
 			alert("Дякуємо за заявку! Скоро ми з Вами зв'яжемося.");
 			$("#callback-form3").trigger("reset");
+			$('#callback-button3').text(loadButton);
 		});
 		return false;
 	});

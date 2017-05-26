@@ -52,10 +52,10 @@
 
 <body>
     <nav>
-        <div class="nav-wrapper container">
-            <a href="#" data-activates="mobile-demo" class="button-collapse right">
+    <a href="#" data-activates="mobile-demo" class="button-collapse right">
                 <i class="material-icons hide">menu</i>
             </a>
+        <div class="nav-wrapper container">
             <a href="<?php echo get_home_url(); ?>">
                 <div class="logo-block left">
                     <img class="header-logo" src="<?php echo get_template_directory_uri(); ?>/img/logo/logo.svg" alt="logo">
