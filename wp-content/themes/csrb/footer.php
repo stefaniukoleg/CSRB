@@ -11,8 +11,7 @@
                     <?php pll_e('Адреса'); ?>
                 </div>
                 <div class="contacts-bold">
-                    +38 067 703 80 07 <br>
-                    +38 063 324 17 79
+                    ‎+380673743331
                 </div>
                 <div class="contacts-thin">
                     ukrpol-lviv@ukr.net <br>

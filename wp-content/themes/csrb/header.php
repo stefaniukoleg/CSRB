@@ -78,9 +78,9 @@
                 ?>
             </div>
             <ul id="top-menu" class="left menu-block hide-on-med-and-down">
-                <li><a href="<?php echo get_home_url(); ?>/#visa"><?php pll_e('Візи'); ?></a></li>
-                <li><a href="<?php echo get_home_url(); ?>/#country"><?php pll_e('Країни'); ?></a></li>
                 <li><a href="<?php echo get_home_url(); ?>/#imigration"><?php pll_e('Імміграція'); ?></a></li>
+                <li><a href="<?php echo get_home_url(); ?>/#country"><?php pll_e('Країни'); ?></a></li>
+                <li><a href="<?php echo get_home_url(); ?>/#visa"><?php pll_e('Візи'); ?></a></li>
                 <li><a href="<?php echo get_home_url(); ?>/#team"><?php pll_e('Команда'); ?></a></li>
                 <li><a href="<?php echo get_home_url(); ?>/#contacts"><?php pll_e('Контакти'); ?></a></li>
             </ul>
@@ -98,9 +98,9 @@
                 </li>
             </ul>
             <ul class="side-nav" id="mobile-demo">
-                <li><a href="<?php echo get_home_url(); ?>/#visa"><?php pll_e('Візи'); ?></a></li>
-                <li><a href="<?php echo get_home_url(); ?>/#country"><?php pll_e('Країни'); ?></a></li>
                 <li><a href="<?php echo get_home_url(); ?>/#imigration"><?php pll_e('Імміграція'); ?></a></li>
+                <li><a href="<?php echo get_home_url(); ?>/#country"><?php pll_e('Країни'); ?></a></li>
+                <li><a href="<?php echo get_home_url(); ?>/#visa"><?php pll_e('Візи'); ?></a></li>
                 <li><a href="<?php echo get_home_url(); ?>/#team"><?php pll_e('Команда'); ?></a></li>
                 <li><a href="<?php echo get_home_url(); ?>/#contacts"><?php pll_e('Контакти'); ?></a></li>
             </ul>

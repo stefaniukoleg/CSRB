@@ -127,6 +127,7 @@ if (!current_user_can('edit_users')) {
     //pll_register_string($name, $string, $group, $multiline);
     pll_register_string('Навігація', 'Візи');
     pll_register_string('Навігація', 'Країни');
+/*    pll_register_string('Навігація', 'Імміграція');*/
     pll_register_string('Навігація', 'Правова допомога');
     pll_register_string('Навігація', 'Команда');
     pll_register_string('Навігація', 'Контакти');
