@@ -1,5 +1,15 @@
 # CSRB
 
+ver. 0.99.1
+  - замінив прапорці мов
+  - універсальний шаблон на сторінках imigrations
+  -  форматоване виведення тексту на сторінках:
+    - single-immigrations
+    - single-contries
+    - taxonomy-visa_type
+  - встановив плагін TinyMCE Advanced (розширений редактор тексту)
+
+
 ver. 0.99
   - видалив плагін Contact Form 7
   - переклав alert в контактних формах

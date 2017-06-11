@@ -86,7 +86,12 @@
             </div>';
         }
 
-        echo '
+        $term = get_queried_object();
+        $second_desc = get_field('додатковий_опис', $term);
+        if ( !empty($second_desc) ) {
+            $second_desc = apply_filters( 'the_content', $second_desc );
+            $second_desc = str_replace( ']]>', ']]&gt;', $second_desc );
+            echo '
             <div class="single-block">
                 <div class="parallax-container container-mob-single">
                     <div class="parallax">
@@ -94,10 +99,8 @@
                         <div class="mask">
                             <div class="row container">
                                 <div class="col l12 s12 m12 center"> 
-                                    <div class="single-sign fadeInLeft wow" data-wow-delay="0.2s">';
-                                        $term = get_queried_object();
-                                        echo get_field('додатковий_опис', $term);
-                                    echo '
+                                    <div class="single-sign fadeInLeft wow" data-wow-delay="0.2s">' .
+                                        $second_desc . '
                                     </div>
                                 </div>
                             </div>
@@ -105,6 +108,8 @@
                     </div>
                 </div>  
             </div>';
+        }
+        
         wp_reset_postdata();
     } //end if
     
