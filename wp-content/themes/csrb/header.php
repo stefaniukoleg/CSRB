@@ -48,6 +48,7 @@
     </style>
     <script src='https://api.mapbox.com/mapbox-gl-js/v0.35.1/mapbox-gl.js'></script>
     <link href='https://api.mapbox.com/mapbox-gl-js/v0.35.1/mapbox-gl.css' rel='stylesheet' />
+    <?php wp_head(); ?>
 </head>
 
 <body>
@@ -67,8 +68,8 @@
                     $languages = pll_the_languages(array('raw'=>1)); 
                     foreach( $languages as $language ) {
                         echo '
-                        <a href="' . $language[url] . '">
-                            <img class="lang-img" src="' . $language[flag] . '" alt="logo">
+                        <a href="' . $language["url"] . '">
+                            <img class="lang-img" src="' . $language["flag"] . '" alt="logo">
                         </a>';
                     }
                 /*
